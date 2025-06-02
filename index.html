@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abrar Ahmed - Software Engineer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    
+    <div class="page-loader">
+        <div class="loader-content">
+            <div class="loader-logo">A</div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="noise-overlay"></div>
+    
+    <header>
+        <div class="progress-bar"></div>
+        <nav>
+            <div class="logo">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">Abrar</span>
+                    <span class="logo-dot"></span>
+                </a>
+            </div>
+            <div class="nav-links">
+                <a href="#about" class="nav-item"><span class="nav-number">01.</span>About</a>
+                <a href="#skills" class="nav-item"><span class="nav-number">02.</span>Skills</a>
+                <a href="#experience" class="nav-item"><span class="nav-number">03.</span>Experience</a>
+                <a href="#education" class="nav-item"><span class="nav-number">04.</span>Education</a>
+                <a href="#projects" class="nav-item"><span class="nav-number">05.</span>Projects</a>
+                <a href="#contact" class="nav-item"><span class="nav-number">06.</span>Contact</a>
+                <a href="#" class="resume-link">Resume</a>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="social-icon">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="social-icon">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="social-icon">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="social-icon">
+                    <i data-lucide="facebook"></i>
+                </a>
+            </div>
+            <div class="theme-toggle">
+                <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                    <i data-lucide="moon"></i>
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                    <span class="hamburger-line"></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <div class="mobile-menu">
+        <div class="mobile-menu-container">
+            <div class="mobile-nav-links">
+                <a href="#about" class="mobile-nav-item"><span class="nav-number">01.</span>About</a>
+                <a href="#skills" class="mobile-nav-item"><span class="nav-number">02.</span>Skills</a>
+                <a href="#experience" class="mobile-nav-item"><span class="nav-number">03.</span>Experience</a>
+                <a href="#education" class="mobile-nav-item"><span class="nav-number">04.</span>Education</a>
+                <a href="#projects" class="mobile-nav-item"><span class="nav-number">05.</span>Projects</a>
+                <a href="#contact" class="mobile-nav-item"><span class="nav-number">06.</span>Contact</a>
+                <a href="#" class="mobile-resume-link">Resume</a>
+            </div>
+            <div class="mobile-social-links">
+                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="mobile-social-icon">
+                    <i data-lucide="github"></i>
+                </a>
+                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="mobile-social-icon">
+                    <i data-lucide="instagram"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="mobile-social-icon">
+                    <i data-lucide="linkedin"></i>
+                </a>
+                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="mobile-social-icon">
+                    <i data-lucide="facebook"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Left and right sidebars removed as per user request -->
+
+    <main>
+        <section class="hero">
+            <div id="particles-js" class="particles-container"></div>
+            <div class="hero-content">
+                <div class="intro-text">
+                    <p class="greeting">Hi, my name is</p>
+                    <h1 class="hero-title">
+                        <span class="hero-name">Abrar Ahmed</span>
+                        <span class="hero-title-bg"></span>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <span class="typing-text"></span>
+                        <span class="cursor-typing">|</span>
+                    </h2>
+                    <p class="description">
+                        I specialize in transforming complex ideas into seamless digital experiences, 
+                        focusing on clean, efficient code and innovative solutions to meet your specific needs.
+                    </p>
+                    <div class="cta-buttons">
+                        <a href="#contact" class="contact-btn">Contact Me <i data-lucide="arrow-right"></i></a>
+                        <a href="#about" class="scroll-btn">Explore My Work <i data-lucide="arrow-down"></i></a>
+                    </div>
+                </div>
+                <div class="hero-3d-element">
+                    <div class="floating-cube-container">
+                        <div class="floating-cube">
+                            <div class="cube-face front"></div>
+                            <div class="cube-face back"></div>
+                            <div class="cube-face right"></div>
+                            <div class="cube-face left"></div>
+                            <div class="cube-face top"></div>
+                            <div class="cube-face bottom"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="scroll-arrows">
+                    <span class="scroll-arrow"></span>
+                    <span class="scroll-arrow"></span>
+                    <span class="scroll-arrow"></span>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-paragraph">
+                        Passionate Software Engineer with hands-on experience in both frontend and backend development.
+                        I began my journey crafting responsive and interactive UIs using React and TypeScript, and I'm now thriving
+                        in backend development, leveraging modern technologies to build cloud-native solutions.
+                    </p>
+                    <p class="about-paragraph">
+                        Eager to learn, solve complex problems, and deliver scalable, reliable software. Whether it's writing clean
+                        code, optimizing performance, or collaborating across global teams, I take pride in contributing to impactful
+                        projects that drive innovation.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="25">0</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <!-- Happy Client stat removed as per user request -->
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="assets/images/profile.png" alt="Profile Photo" class="profile-image">
+                        <div class="image-overlay"></div>
+                        <div class="image-frame"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cv-download">
+                <a href="#" class="download-btn">Download CV <i data-lucide="download"></i></a>
+            </div>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2 class="section-title"><span class="section-number">02.</span> Skills</h2>
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-tab="languages">Languages</button>
+                <button class="skill-tab" data-tab="frameworks">Frameworks & Libraries</button>
+                <button class="skill-tab" data-tab="tools">Developer Tools</button>
+            </div>
+            <div class="skills-container">
+                <div class="skill-category active" id="languages">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="HTML">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/html.svg" alt="HTML" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">HTML</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="95"></div>
+                                </div>
+                                <span class="skill-percentage">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="CSS">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/css.svg" alt="CSS" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="JavaScript">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/javascript.svg" alt="JavaScript" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="TypeScript">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/typescript.svg" alt="TypeScript" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">TypeScript</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/python.svg" alt="Python" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="PHP">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/php.svg" alt="PHP" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">PHP</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" id="frameworks">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="React">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/react.svg" alt="React" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Express">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/express.svg" alt="Express" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Express</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Node.js">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/nodejs.svg" alt="Node.js" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Laravel">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/laravel.svg" alt="Laravel" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Laravel</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Tailwind CSS">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/tailwind.svg" alt="Tailwind CSS" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Tailwind CSS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="MongoDB">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/mongodb.svg" alt="MongoDB" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">MongoDB</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" id="tools">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="Git">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/git.svg" alt="Git" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Docker">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/docker.svg" alt="Docker" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Docker</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Figma">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/figma.svg" alt="Figma" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Figma</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills chart removed as per user request -->
+        </section>
+
+        <section id="experience" class="experience">
+            <h2 class="section-title"><span class="section-number">03.</span> Work Experience</h2>
+            <div class="experience-timeline">
+                <div class="timeline-track"></div>
+                <div class="experience-container">
+                    <div class="experience-item">
+                        <div class="experience-date">
+                            <span class="date-text">Jan 2023 - Present</span>
+                        </div>
+                        <div class="experience-content">
+                            <div class="company-logo">
+                                <img src="assets/icons/company1.svg" alt="FinovaBank Logo">
+                            </div>
+                            <div class="experience-details">
+                                <h3 class="company-name">FinovaBank</h3>
+                                <p class="location"><i data-lucide="map-pin"></i> New York, USA</p>
+                                <h4 class="job-title">Software Engineer</h4>
+                                <div class="responsibilities">
+                                    <h5 class="responsibilities-title">Responsibilities:</h5>
+                                    <ul class="responsibilities-list">
+                                        <li>Developed and maintained core banking applications using Angular and Java Spring</li>
+                                        <li>Implemented secure authentication and transaction processing systems</li>
+                                        <li>Optimized database queries and improved application performance by 40%</li>
+                                        <li>Collaborated with cross-functional teams to deliver features on schedule</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Angular</span>
+                                    <span class="tech-tag">Java Spring</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Kubernetes</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-date">
+                            <span class="date-text">Mar 2021 - Dec 2022</span>
+                        </div>
+                        <div class="experience-content">
+                            <div class="company-logo">
+                                <img src="assets/icons/company2.svg" alt="BlockGuardian Logo">
+                            </div>
+                            <div class="experience-details">
+                                <h3 class="company-name">BlockGuardian</h3>
+                                <p class="location"><i data-lucide="map-pin"></i> San Francisco, USA</p>
+                                <h4 class="job-title">Frontend Developer</h4>
+                                <div class="responsibilities">
+                                    <h5 class="responsibilities-title">Responsibilities:</h5>
+                                    <ul class="responsibilities-list">
+                                        <li>Built responsive user interfaces using React and TypeScript</li>
+                                        <li>Implemented real-time data visualization for blockchain analytics</li>
+                                        <li>Integrated RESTful APIs and WebSocket connections for live data updates</li>
+                                        <li>Participated in code reviews and mentored junior developers</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">React</span>
+                                    <span class="tech-tag">TypeScript</span>
+                                    <span class="tech-tag">D3.js</span>
+                                    <span class="tech-tag">WebSockets</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="experience-item">
+                        <div class="experience-date">
+                            <span class="date-text">Jun 2020 - Feb 2021</span>
+                        </div>
+                        <div class="experience-content">
+                            <div class="company-logo">
+                                <img src="assets/icons/company3.svg" alt="CarbonXchange Logo">
+                            </div>
+                            <div class="experience-details">
+                                <h3 class="company-name">CarbonXchange</h3>
+                                <p class="location"><i data-lucide="map-pin"></i> Berlin, Germany</p>
+                                <h4 class="job-title">Full Stack Developer Intern</h4>
+                                <div class="responsibilities">
+                                    <h5 class="responsibilities-title">Responsibilities:</h5>
+                                    <ul class="responsibilities-list">
+                                        <li>Developed features for a carbon credit trading platform using Vue.js and Node.js</li>
+                                        <li>Implemented data visualization components for environmental impact metrics</li>
+                                        <li>Assisted in database design and optimization using PostgreSQL</li>
+                                        <li>Participated in Agile development processes and daily stand-ups</li>
+                                    </ul>
+                                </div>
+                                <div class="tech-stack">
+                                    <span class="tech-tag">Vue.js</span>
+                                    <span class="tech-tag">Node.js</span>
+                                    <span class="tech-tag">PostgreSQL</span>
+                                    <span class="tech-tag">Chart.js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="education">
+            <h2 class="section-title"><span class="section-number">04.</span> Education</h2>
+            <div class="education-container">
+                <div class="education-item">
+                    <div class="university-logo">
+                        <img src="assets/icons/university1.svg" alt="MIT Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3 class="university-name">Massachusetts Institute of Technology</h3>
+                        <p class="location"><i data-lucide="map-pin"></i> Cambridge, USA</p>
+                        <p class="degree">Master of Science - Computer Science</p>
+                        <p class="duration"><i data-lucide="calendar"></i> Sep 2018 - May 2020</p>
+                        <div class="education-details">
+                            <h4 class="courses-title">Key Courses:</h4>
+                            <div class="courses-list">
+                                <span class="course-tag">Advanced Algorithms</span>
+                                <span class="course-tag">Machine Learning</span>
+                                <span class="course-tag">Distributed Systems</span>
+                                <span class="course-tag">Computer Graphics</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="education-item">
+                    <div class="university-logo">
+                        <img src="assets/icons/university2.svg" alt="UC Berkeley Logo">
+                    </div>
+                    <div class="education-content">
+                        <h3 class="university-name">University of California, Berkeley</h3>
+                        <p class="location"><i data-lucide="map-pin"></i> Berkeley, USA</p>
+                        <p class="degree">Bachelor of Science - Computer Science</p>
+                        <p class="duration"><i data-lucide="calendar"></i> Sep 2014 - May 2018</p>
+                        <div class="education-details">
+                            <h4 class="courses-title">Key Courses:</h4>
+                            <div class="courses-list">
+                                <span class="course-tag">Data Structures</span>
+                                <span class="course-tag">Operating Systems</span>
+                                <span class="course-tag">Database Systems</span>
+                                <span class="course-tag">Web Development</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2 class="section-title"><span class="section-number">05.</span> Projects</h2>
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
+                <button class="filter-btn" data-filter="ai">AI</button>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/FinovaBank" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/finovabank.jpg" alt="FinovaBank" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="finovabank">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">FinovaBank</h3>
+                        <p class="project-description">Digital banking platform with advanced security features, real-time transactions, and AI-powered financial insights.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Angular</span>
+                            <span class="tech-tag">Java Spring</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="blockchain">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/BlockGuardian" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/blockguardian.jpg" alt="BlockGuardian" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="blockguardian">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">BlockGuardian</h3>
+                        <p class="project-description">Blockchain security platform that monitors transactions, detects anomalies, and provides real-time alerts for suspicious activities.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Solidity</span>
+                            <span class="tech-tag">Web3.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/CarbonXchange" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/carbonxchange.jpg" alt="CarbonXchange" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="carbonxchange">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">CarbonXchange</h3>
+                        <p class="project-description">Carbon credit trading platform that connects businesses and individuals to offset their carbon footprint through verified projects.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Vue.js</span>
+                            <span class="tech-tag">Express</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">D3.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="ai">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/AlphaMind" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/alphamind.jpg" alt="AlphaMind" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="alphamind">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">AlphaMind</h3>
+                        <p class="project-description">AI-powered learning platform that adapts to individual learning styles and provides personalized educational content.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">FastAPI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="mobile">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/Fluxora" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/fluxora.jpg" alt="Fluxora" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="fluxora">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">Fluxora</h3>
+                        <p class="project-description">Mobile productivity app that helps users manage tasks, track habits, and improve focus through gamification techniques.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React Native</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Redux</span>
+                            <span class="tech-tag">Expo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="web">
+                    <div class="project-header">
+                        <div class="project-type-icons">
+                            <i data-lucide="folder"></i>
+                            <i data-lucide="code"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/FinFlow" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-image-container">
+                            <img src="assets/images/finflow.jpg" alt="FinFlow" class="project-image">
+                            <div class="project-overlay">
+                                <button class="view-project-btn" data-project="finflow">View Project</button>
+                            </div>
+                        </div>
+                        <h3 class="project-title">FinFlow</h3>
+                        <p class="project-description">Financial management dashboard that visualizes spending patterns, predicts future expenses, and provides budget recommendations.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog section removed as per user request -->
+
+        <section id="testimonials" class="testimonials">
+            <h2 class="section-title"><span class="section-number">07.</span> Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i data-lucide="quote"></i>
+                            </div>
+                            <p class="testimonial-text">Abrar delivered an exceptional banking application that exceeded our expectations. His attention to detail and problem-solving skills were instrumental in the project's success.</p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="assets/images/testimonial1.jpg" alt="Sarah Johnson">
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Sarah Johnson</h4>
+                                    <p class="author-position">CTO, FinovaBank</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i data-lucide="quote"></i>
+                            </div>
+                            <p class="testimonial-text">Working with Abrar was a pleasure. His technical expertise and ability to translate complex requirements into elegant solutions made our blockchain project a success.</p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="assets/images/testimonial2.jpg" alt="Michael Chen">
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Michael Chen</h4>
+                                    <p class="author-position">Lead Developer, BlockGuardian</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-item">
+                        <div class="testimonial-content">
+                            <div class="testimonial-quote">
+                                <i data-lucide="quote"></i>
+                            </div>
+                            <p class="testimonial-text">Abrar's innovative approach to our carbon trading platform helped us create an intuitive and powerful tool that our users love. His dedication to quality is unmatched.</p>
+                            <div class="testimonial-author">
+                                <div class="author-image">
+                                    <img src="assets/images/testimonial3.jpg" alt="Emma Schmidt">
+                                </div>
+                                <div class="author-info">
+                                    <h4 class="author-name">Emma Schmidt</h4>
+                                    <p class="author-position">Product Manager, CarbonXchange</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonials-controls">
+                    <button class="testimonial-arrow prev" aria-label="Previous testimonial">
+                        <i data-lucide="chevron-left"></i>
+                    </button>
+                    <div class="testimonials-dots">
+                        <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+                        <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+                        <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+                    </div>
+                    <button class="testimonial-arrow next" aria-label="Next testimonial">
+                        <i data-lucide="chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2 class="section-title"><span class="section-number">08.</span> Contact</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Get In Touch</h3>
+                    <p class="contact-description">
+                        I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out!
+                    </p>
+                    <div class="contact-methods">
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="mail"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-method-title">Email</h4>
+                                <p class="contact-method-value">abrarahmedpei@gmail.com</p>
+                                <a href="mailto:abrarahmedpei@gmail.com" class="contact-link">Send Email <i data-lucide="arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="linkedin"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-method-title">LinkedIn</h4>
+                                <p class="contact-method-value">linkedin.com/in/abrar2030</p>
+                                <a href="https://www.linkedin.com/in/abrar2030/" target="_blank" class="contact-link">Connect <i data-lucide="arrow-right"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">
+                                <i data-lucide="github"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4 class="contact-method-title">GitHub</h4>
+                                <p class="contact-method-value">github.com/abrar2030</p>
+                                <a href="https://github.com/abrar2030" target="_blank" class="contact-link">Follow <i data-lucide="arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <h3 class="contact-subtitle">Send Me a Message</h3>
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <div class="input-container">
+                                <i data-lucide="user"></i>
+                                <input type="text" id="name" placeholder="Your Name" required>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <span class="error-message" id="name-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <div class="input-container">
+                                <i data-lucide="mail"></i>
+                                <input type="email" id="email" placeholder="Your Email" required>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <span class="error-message" id="email-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <div class="input-container">
+                                <i data-lucide="file-text"></i>
+                                <input type="text" id="subject" placeholder="Subject" required>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <span class="error-message" id="subject-error"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <div class="input-container textarea-container">
+                                <i data-lucide="message-square"></i>
+                                <textarea id="message" placeholder="Your Message" required></textarea>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <span class="error-message" id="message-error"></span>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <i data-lucide="send"></i>
+                            <span class="btn-loader"></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat bot removed as per user request -->
+    </main>
+
+    <div class="project-modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close modal">
+                <i data-lucide="x"></i>
+            </button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Project Details</h3>
+                </div>
+                <div class="modal-body">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo-link">
+                    <span class="logo-text">Abrar</span>
+                    <span class="logo-dot"></span>
+                </a>
+            </div>
+            <div class="footer-links">
+                <div class="footer-nav">
+                    <a href="#about" class="footer-link">About</a>
+                    <a href="#skills" class="footer-link">Skills</a>
+                    <a href="#experience" class="footer-link">Experience</a>
+                    <a href="#projects" class="footer-link">Projects</a>
+                    <a href="#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="footer-social-link">
+                        <i data-lucide="github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="footer-social-link">
+                        <i data-lucide="instagram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="footer-social-link">
+                        <i data-lucide="linkedin"></i>
+                    </a>
+                    <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="footer-social-link">
+                        <i data-lucide="facebook"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">Designed & Built by Abrar Ahmed</p>
+                <p class="copyright">© 2025 All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="back-to-top">
+        <button id="back-to-top-btn" aria-label="Back to top">
+            <i data-lucide="arrow-up"></i>
+        </button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
