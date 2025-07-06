@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abrar Ahmed - Software Engineer</title>
+    <title>Abrar - Software Engineer</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon/favicon.ico">
+    <link rel="icon" href="favicon.ico">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
@@ -16,96 +16,77 @@
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 </head>
 <body>
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-    
-    <div class="page-loader">
-        <div class="loader-content">
-            <div class="loader-logo">A</div>
-            <div class="loader-bar">
-                <div class="loader-progress"></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="noise-overlay"></div>
-    
     <header>
-        <div class="progress-bar"></div>
         <nav>
             <div class="logo">
-                <a href="#" class="logo-link">
-                    <span class="logo-text">Abrar</span>
-                    <span class="logo-dot"></span>
-                </a>
+                <a href="#">Abrar</a>
             </div>
             <div class="nav-links">
-                <a href="#about" class="nav-item"><span class="nav-number">01.</span>About</a>
-                <a href="#skills" class="nav-item"><span class="nav-number">02.</span>Skills</a>
-                <a href="#experience" class="nav-item"><span class="nav-number">03.</span>Experience</a>
-                <a href="#education" class="nav-item"><span class="nav-number">04.</span>Education</a>
-                <a href="#projects" class="nav-item"><span class="nav-number">05.</span>Projects</a>
-                <a href="#contact" class="nav-item"><span class="nav-number">06.</span>Contact</a>
-                <a href="#" class="resume-link">Resume</a>
+                <a href="#about">1.About</a>
+                <a href="#skills">2.Skills</a>
+                <a href="#experience">3.Work Experience</a>
+                <a href="#education">4.Education</a>
+                <a href="#projects">5.Projects</a>
+                <a href="#testimonials">6.Testimonials</a>
+                <a href="#contact">7.Contact</a>
+                <a href="assets/Resume.pdf" class="download-btn primary">
+                    <span>Resume</span>
+                </a>                
             </div>
             <div class="social-links">
-                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="social-icon">
+                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank">
                     <i data-lucide="github"></i>
                 </a>
-                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="social-icon">
+                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank">
                     <i data-lucide="instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="social-icon">
+                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank">
                     <i data-lucide="linkedin"></i>
                 </a>
-                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="social-icon">
+                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank">
                     <i data-lucide="facebook"></i>
                 </a>
             </div>
             <div class="theme-toggle">
-                <button id="theme-toggle-btn" aria-label="Toggle dark mode">
+                <button id="theme-toggle-btn">
                     <i data-lucide="moon"></i>
-                </button>
-            </div>
-            <div class="mobile-menu-toggle">
-                <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
                 </button>
             </div>
         </nav>
     </header>
 
-    <div class="mobile-menu">
-        <div class="mobile-menu-container">
-            <div class="mobile-nav-links">
-                <a href="#about" class="mobile-nav-item"><span class="nav-number">01.</span>About</a>
-                <a href="#skills" class="mobile-nav-item"><span class="nav-number">02.</span>Skills</a>
-                <a href="#experience" class="mobile-nav-item"><span class="nav-number">03.</span>Experience</a>
-                <a href="#education" class="mobile-nav-item"><span class="nav-number">04.</span>Education</a>
-                <a href="#projects" class="mobile-nav-item"><span class="nav-number">05.</span>Projects</a>
-                <a href="#contact" class="mobile-nav-item"><span class="nav-number">06.</span>Contact</a>
-                <a href="#" class="mobile-resume-link">Resume</a>
-            </div>
-            <div class="mobile-social-links">
-                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="mobile-social-icon">
+    <!-- Left fixed social icons -->
+    <div class="social-sidebar">
+        <ul class="social-sidebar-list">
+            <li>
+                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank">
                     <i data-lucide="github"></i>
                 </a>
-                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="mobile-social-icon">
+            </li>
+            <li>
+                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank">
                     <i data-lucide="instagram"></i>
                 </a>
-                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="mobile-social-icon">
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank">
                     <i data-lucide="linkedin"></i>
                 </a>
-                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="mobile-social-icon">
+            </li>
+            <li>
+                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank">
                     <i data-lucide="facebook"></i>
                 </a>
-            </div>
-        </div>
+            </li>
+        </ul>
+        <div class="sidebar-line"></div>
     </div>
 
-    <!-- Left and right sidebars removed as per user request -->
+    <!-- Right fixed email -->
+    <div class="email-sidebar">
+        <a href="mailto:abrarahmedpei@gmail.com">abrarahmedpei@gmail.com</a>
+        <div class="sidebar-line"></div>
+    </div>
 
     <main>
         <section class="hero">
@@ -156,76 +137,106 @@
         </section>
 
         <section id="about" class="about">
-            <h2 class="section-title"><span class="section-number">01.</span> About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p class="about-paragraph">
-                        Passionate Software Engineer with hands-on experience in both frontend and backend development.
-                        I began my journey crafting responsive and interactive UIs using React and TypeScript, and I'm now thriving
-                        in backend development, leveraging modern technologies to build cloud-native solutions.
-                    </p>
-                    <p class="about-paragraph">
-                        Eager to learn, solve complex problems, and deliver scalable, reliable software. Whether it's writing clean
-                        code, optimizing performance, or collaborating across global teams, I take pride in contributing to impactful
-                        projects that drive innovation.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="5">0</div>
-                            <div class="stat-label">Years Experience</div>
+            <h2 class="section-title"><span>01.</span> About Me</h2>
+            <div class="about-container">
+                <div class="about-main-content">
+                    <div class="about-text-section">
+                        <div class="about-intro">
+                            <h3 class="about-subtitle">Who I Am</h3>
+                            <p class="about-description">
+                                I’m a Financial Engineering MSc candidate at WorldQuant University with a BSc in Computer Science from Eötvös Loránd University. I build cloud‑native (AWS, Kubernetes, Terraform) Python and Java applications for real‑time quantitative modeling, risk management, and algorithmic trading.
+                                I specialize in derivative pricing, stochastic modeling, portfolio optimization, and AI‑driven forecasting, integrating deep‑learning techniques to improve market efficiency and profitability.             
+                            </p>
+                            <p class="about-description">
+                                I’m driven to advance quantitative finance by embedding ML in trading strategies, building real‑time risk frameworks, and exploring blockchain for transparent markets to deliver data‑driven, impactful solutions.
+                            </p>
                         </div>
-                        <div class="stat-item">
-                            <div class="stat-number" data-count="25">0</div>
-                            <div class="stat-label">Projects Completed</div>
+                        
+
+                    </div>
+                    
+                    <div class="about-profile-section">
+                        <div class="profile-card">
+                            <div class="profile-image-container">
+                                <div class="profile-background-decoration"></div>
+                                <img src="assets/images/profile.png" alt="Profile Photo" class="profile-image">
+                                <div class="profile-status">
+                                    <div class="status-indicator"></div>
+                                    <span>Available for opportunities</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-info">
+                                <h3 class="profile-name">Abrar Ahmed</h3>
+                                <p class="profile-title">Software Developer</p>
+                                <div class="profile-location">
+                                    <i data-lucide="map-pin"></i>
+                                    <span>Islamabad, Pakistan</span>
+                                </div>
+                            </div>
+                            
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <span class="stat-number">1+</span>
+                                    <span class="stat-label">Years Experience</span>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-number">20+</span>
+                                    <span class="stat-label">Projects Completed</span>
+                                </div>
+                            </div>
                         </div>
-                        <!-- Happy Client stat removed as per user request -->
                     </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="assets/images/profile.png" alt="Profile Photo" class="profile-image">
-                        <div class="image-overlay"></div>
-                        <div class="image-frame"></div>
-                    </div>
+                
+                <div class="about-actions">
+                    <a href="assets/Resume.pdf" class="download-btn primary">
+                        <i data-lucide="download"></i>
+                        <span>Download CV</span>
+                    </a>
+                    <a href="#contact" class="contact-btn secondary">
+                        <i data-lucide="message-circle"></i>
+                        <span>Let's Talk</span>
+                    </a>
                 </div>
-            </div>
-            <div class="cv-download">
-                <a href="#" class="download-btn">Download CV <i data-lucide="download"></i></a>
             </div>
         </section>
 
         <section id="skills" class="skills">
-            <h2 class="section-title"><span class="section-number">02.</span> Skills</h2>
+            <h2 class="section-title"><span>02.</span> Skills</h2>
             <div class="skills-tabs">
-                <button class="skill-tab active" data-tab="languages">Languages</button>
-                <button class="skill-tab" data-tab="frameworks">Frameworks & Libraries</button>
-                <button class="skill-tab" data-tab="tools">Developer Tools</button>
+                <button class="skill-tab active" data-tab="languages">Programming Languages</button>
+                <button class="skill-tab" data-tab="frameworks">Frameworks</button>
+                <button class="skill-tab" data-tab="cicd">CI/CD Pipelines</button>
+                <button class="skill-tab" data-tab="scripting">Scripting & Automation</button>
+                <button class="skill-tab" data-tab="devops">DevOps & Cloud</button>
+                <button class="skill-tab" data-tab="finance">Finance & Quantitative</button>
             </div>
             <div class="skills-container">
                 <div class="skill-category active" id="languages">
                     <div class="skill-icons">
-                        <div class="skill-item" data-skill="HTML">
+                        <div class="skill-item" data-skill="Java">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/html.svg" alt="HTML" class="skill-icon">
+                                <i data-lucide="coffee" class="skill-icon-lucide"></i>
                             </div>
                             <div class="skill-info">
-                                <span class="skill-name">HTML</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="95"></div>
-                                </div>
-                                <span class="skill-percentage">95%</span>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="CSS">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/css.svg" alt="CSS" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">CSS</span>
+                                <span class="skill-name">Java</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-progress="90"></div>
                                 </div>
                                 <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Python">
+                            <div class="skill-icon-wrapper">
+                                <img src="assets/icons/python.svg" alt="Python" class="skill-icon">
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
                             </div>
                         </div>
                         <div class="skill-item" data-skill="JavaScript">
@@ -242,7 +253,7 @@
                         </div>
                         <div class="skill-item" data-skill="TypeScript">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/typescript.svg" alt="TypeScript" class="skill-icon">
+                                <i data-lucide="code" class="skill-icon-lucide"></i>
                             </div>
                             <div class="skill-info">
                                 <span class="skill-name">TypeScript</span>
@@ -252,35 +263,35 @@
                                 <span class="skill-percentage">80%</span>
                             </div>
                         </div>
-                        <div class="skill-item" data-skill="Python">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/python.svg" alt="Python" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Python</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
-                                </div>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="PHP">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/php.svg" alt="PHP" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">PHP</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="70"></div>
-                                </div>
-                                <span class="skill-percentage">70%</span>
-                            </div>
-                        </div>
                     </div>
                 </div>
                 
                 <div class="skill-category" id="frameworks">
                     <div class="skill-icons">
+                        <div class="skill-item" data-skill="Spring Boot 3">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="leaf" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Spring Boot 3</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="JUnit 5">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="check-circle" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JUnit 5</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
                         <div class="skill-item" data-skill="React">
                             <div class="skill-icon-wrapper">
                                 <img src="assets/icons/react.svg" alt="React" class="skill-icon">
@@ -293,60 +304,53 @@
                                 <span class="skill-percentage">85%</span>
                             </div>
                         </div>
-                        <div class="skill-item" data-skill="Express">
+                        <div class="skill-item" data-skill="Angular">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/express.svg" alt="Express" class="skill-icon">
+                                <i data-lucide="triangle" class="skill-icon-lucide"></i>
                             </div>
                             <div class="skill-info">
-                                <span class="skill-name">Express</span>
+                                <span class="skill-name">Angular</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" id="cicd">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="Jenkins">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="settings" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Jenkins</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="GitHub Actions">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="github" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">GitHub Actions</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-progress="80"></div>
                                 </div>
                                 <span class="skill-percentage">80%</span>
                             </div>
                         </div>
-                        <div class="skill-item" data-skill="Node.js">
+                        <div class="skill-item" data-skill="Spinnaker">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/nodejs.svg" alt="Node.js" class="skill-icon">
+                                <i data-lucide="rotate-cw" class="skill-icon-lucide"></i>
                             </div>
                             <div class="skill-info">
-                                <span class="skill-name">Node.js</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="80"></div>
-                                </div>
-                                <span class="skill-percentage">80%</span>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Laravel">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/laravel.svg" alt="Laravel" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Laravel</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
-                                </div>
-                                <span class="skill-percentage">75%</span>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="Tailwind CSS">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/tailwind.svg" alt="Tailwind CSS" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Tailwind CSS</span>
-                                <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="90"></div>
-                                </div>
-                                <span class="skill-percentage">90%</span>
-                            </div>
-                        </div>
-                        <div class="skill-item" data-skill="MongoDB">
-                            <div class="skill-icon-wrapper">
-                                <img src="assets/icons/mongodb.svg" alt="MongoDB" class="skill-icon">
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">MongoDB</span>
+                                <span class="skill-name">Spinnaker</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-progress="75"></div>
                                 </div>
@@ -356,18 +360,119 @@
                     </div>
                 </div>
                 
-                <div class="skill-category" id="tools">
+                <div class="skill-category" id="scripting">
                     <div class="skill-icons">
-                        <div class="skill-item" data-skill="Git">
+                        <div class="skill-item" data-skill="Python Scripting">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/git.svg" alt="Git" class="skill-icon">
+                                <img src="assets/icons/python.svg" alt="Python" class="skill-icon">
                             </div>
                             <div class="skill-info">
-                                <span class="skill-name">Git</span>
+                                <span class="skill-name">Python Scripting</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Bash">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="terminal" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Bash</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-progress="85"></div>
                                 </div>
                                 <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Shell Scripting">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="command" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Shell Scripting</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Automation Tools">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="zap" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Automation Tools</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category" id="devops">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="AWS">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="cloud" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">AWS</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="GCP">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="cloud-cog" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">GCP</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="IBM Cloud">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="server" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">IBM Cloud</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Terraform">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="layers" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Terraform</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Ansible">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="cog" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Ansible</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
                             </div>
                         </div>
                         <div class="skill-item" data-skill="Docker">
@@ -377,17 +482,17 @@
                             <div class="skill-info">
                                 <span class="skill-name">Docker</span>
                                 <div class="skill-bar">
-                                    <div class="skill-progress" data-progress="75"></div>
+                                    <div class="skill-progress" data-progress="85"></div>
                                 </div>
-                                <span class="skill-percentage">75%</span>
+                                <span class="skill-percentage">85%</span>
                             </div>
                         </div>
-                        <div class="skill-item" data-skill="Figma">
+                        <div class="skill-item" data-skill="Kubernetes">
                             <div class="skill-icon-wrapper">
-                                <img src="assets/icons/figma.svg" alt="Figma" class="skill-icon">
+                                <i data-lucide="hexagon" class="skill-icon-lucide"></i>
                             </div>
                             <div class="skill-info">
-                                <span class="skill-name">Figma</span>
+                                <span class="skill-name">Kubernetes</span>
                                 <div class="skill-bar">
                                     <div class="skill-progress" data-progress="80"></div>
                                 </div>
@@ -396,105 +501,142 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="skill-category" id="finance">
+                    <div class="skill-icons">
+                        <div class="skill-item" data-skill="Financial Markets">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="trending-up" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Financial Markets</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="90"></div>
+                                </div>
+                                <span class="skill-percentage">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Data Analysis">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="bar-chart-3" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Data Analysis</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Econometrics">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="line-chart" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Econometrics</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Derivative Pricing">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="calculator" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Derivative Pricing</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="85"></div>
+                                </div>
+                                <span class="skill-percentage">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Stochastic Modeling">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="activity" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Stochastic Modeling</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="80"></div>
+                                </div>
+                                <span class="skill-percentage">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Monte Carlo Simulations">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="shuffle" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Monte Carlo Simulations</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="75"></div>
+                                </div>
+                                <span class="skill-percentage">75%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item" data-skill="Machine Learning in Finance">
+                            <div class="skill-icon-wrapper">
+                                <i data-lucide="brain" class="skill-icon-lucide"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">ML in Finance</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" data-progress="70"></div>
+                                </div>
+                                <span class="skill-percentage">70%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <!-- Skills chart removed as per user request -->
         </section>
 
         <section id="experience" class="experience">
-            <h2 class="section-title"><span class="section-number">03.</span> Work Experience</h2>
-            <div class="experience-timeline">
-                <div class="timeline-track"></div>
-                <div class="experience-container">
-                    <div class="experience-item">
-                        <div class="experience-date">
-                            <span class="date-text">Jan 2023 - Present</span>
-                        </div>
-                        <div class="experience-content">
-                            <div class="company-logo">
-                                <img src="assets/icons/company1.svg" alt="FinovaBank Logo">
-                            </div>
-                            <div class="experience-details">
-                                <h3 class="company-name">FinovaBank</h3>
-                                <p class="location"><i data-lucide="map-pin"></i> New York, USA</p>
-                                <h4 class="job-title">Software Engineer</h4>
-                                <div class="responsibilities">
-                                    <h5 class="responsibilities-title">Responsibilities:</h5>
-                                    <ul class="responsibilities-list">
-                                        <li>Developed and maintained core banking applications using Angular and Java Spring</li>
-                                        <li>Implemented secure authentication and transaction processing systems</li>
-                                        <li>Optimized database queries and improved application performance by 40%</li>
-                                        <li>Collaborated with cross-functional teams to deliver features on schedule</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Angular</span>
-                                    <span class="tech-tag">Java Spring</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Kubernetes</span>
-                                </div>
-                            </div>
+            <h2 class="section-title"><span>03.</span> Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <img src="assets/icons/ELTE.jpg" alt="Company Logo">
+                    </div>
+                    <div class="experience-content">
+                        <h3>Eotvos Lorand University</h3>
+                        <p class="location">Budapest, Hungary</p>
+                        <h4>Teaching Assistant</h4>
+                        <p class="duration">Feb 2025 - May 2025</p>
+                        <div class="responsibilities">
+                            <h5>Responsibilities:</h5>
+                            <ul>
+                                <li>Supported students in Python, OS, and Algorithms & Data Structures, aiding with concepts & bugs</li>
+                                <li>Conducted tutorials, reviewed assignments, and consistently aided instructors with delivery</li>
+                                <li>Collaborated with faculty to design lab tasks and practice problems tailored to course goals and needs</li>
+                                <li>Provided one-on-one mentorship during office hours to reinforce outcomes & boost academic success</li>
+                            </ul>
                         </div>
                     </div>
+                </div>
 
-                    <div class="experience-item">
-                        <div class="experience-date">
-                            <span class="date-text">Mar 2021 - Dec 2022</span>
-                        </div>
-                        <div class="experience-content">
-                            <div class="company-logo">
-                                <img src="assets/icons/company2.svg" alt="BlockGuardian Logo">
-                            </div>
-                            <div class="experience-details">
-                                <h3 class="company-name">BlockGuardian</h3>
-                                <p class="location"><i data-lucide="map-pin"></i> San Francisco, USA</p>
-                                <h4 class="job-title">Frontend Developer</h4>
-                                <div class="responsibilities">
-                                    <h5 class="responsibilities-title">Responsibilities:</h5>
-                                    <ul class="responsibilities-list">
-                                        <li>Built responsive user interfaces using React and TypeScript</li>
-                                        <li>Implemented real-time data visualization for blockchain analytics</li>
-                                        <li>Integrated RESTful APIs and WebSocket connections for live data updates</li>
-                                        <li>Participated in code reviews and mentored junior developers</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">React</span>
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">D3.js</span>
-                                    <span class="tech-tag">WebSockets</span>
-                                </div>
-                            </div>
-                        </div>
+                <div class="experience-item">
+                    <div class="company-logo">
+                        <img src="assets/icons/Ericsson.png" alt="Company Logo">
                     </div>
-
-                    <div class="experience-item">
-                        <div class="experience-date">
-                            <span class="date-text">Jun 2020 - Feb 2021</span>
-                        </div>
-                        <div class="experience-content">
-                            <div class="company-logo">
-                                <img src="assets/icons/company3.svg" alt="CarbonXchange Logo">
-                            </div>
-                            <div class="experience-details">
-                                <h3 class="company-name">CarbonXchange</h3>
-                                <p class="location"><i data-lucide="map-pin"></i> Berlin, Germany</p>
-                                <h4 class="job-title">Full Stack Developer Intern</h4>
-                                <div class="responsibilities">
-                                    <h5 class="responsibilities-title">Responsibilities:</h5>
-                                    <ul class="responsibilities-list">
-                                        <li>Developed features for a carbon credit trading platform using Vue.js and Node.js</li>
-                                        <li>Implemented data visualization components for environmental impact metrics</li>
-                                        <li>Assisted in database design and optimization using PostgreSQL</li>
-                                        <li>Participated in Agile development processes and daily stand-ups</li>
-                                    </ul>
-                                </div>
-                                <div class="tech-stack">
-                                    <span class="tech-tag">Vue.js</span>
-                                    <span class="tech-tag">Node.js</span>
-                                    <span class="tech-tag">PostgreSQL</span>
-                                    <span class="tech-tag">Chart.js</span>
-                                </div>
-                            </div>
+                    <div class="experience-content">
+                        <h3>Ericsson</h3>
+                        <p class="location">Budapest, Hungary</p>
+                        <h4>Software Developer</h4>
+                        <p class="duration">August 2023 - October 2024</p>
+                        <div class="responsibilities">
+                            <h5>Responsibilities:</h5>
+                            <ul>
+                                <li>Developed data-driven applications using Python, focusing on predictive analytics and automation.</li>
+                                <li>Built and optimized data pipelines using Apache Spark and Pandas to process large-scale datasets.</li>
+                                <li>Applied machine learning models for anomaly detection and performance optimization.</li>
+                                <li>Conducted exploratory data analysis (EDA) and feature engineering to improve model accuracy.</li>
+                                <li>Automated data processing workflows with Python and Apache Airflow for efficiency.</li>
+                                <li>Created interactive dashboards and visualizations using Matplotlib, Seaborn, and Plotly for insights.</li>
+                                <li>Collaborated with cross-functional teams to integrate data solutions into software applications.</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -502,469 +644,425 @@
         </section>
 
         <section id="education" class="education">
-            <h2 class="section-title"><span class="section-number">04.</span> Education</h2>
+            <h2 class="section-title"><span>04.</span> Education</h2>
             <div class="education-container">
                 <div class="education-item">
                     <div class="university-logo">
-                        <img src="assets/icons/university1.svg" alt="MIT Logo">
+                        <img src="assets/icons/WQU.jpg" alt="University Logo">
                     </div>
                     <div class="education-content">
-                        <h3 class="university-name">Massachusetts Institute of Technology</h3>
-                        <p class="location"><i data-lucide="map-pin"></i> Cambridge, USA</p>
-                        <p class="degree">Master of Science - Computer Science</p>
-                        <p class="duration"><i data-lucide="calendar"></i> Sep 2018 - May 2020</p>
-                        <div class="education-details">
-                            <h4 class="courses-title">Key Courses:</h4>
-                            <div class="courses-list">
-                                <span class="course-tag">Advanced Algorithms</span>
-                                <span class="course-tag">Machine Learning</span>
-                                <span class="course-tag">Distributed Systems</span>
-                                <span class="course-tag">Computer Graphics</span>
-                            </div>
-                        </div>
+                        <h3>WorldQuant University</h3>
+                        <p class="location">Washington DC, USA</p>
+                        <p class="degree">Master of Science - Financial Engineering</p>
+                        <p class="duration">Jan 2025 - December 2026</p>
                     </div>
                 </div>
 
                 <div class="education-item">
                     <div class="university-logo">
-                        <img src="assets/icons/university2.svg" alt="UC Berkeley Logo">
+                        <img src="assets/icons/ELTE.jpg" alt="University Logo">
                     </div>
                     <div class="education-content">
-                        <h3 class="university-name">University of California, Berkeley</h3>
-                        <p class="location"><i data-lucide="map-pin"></i> Berkeley, USA</p>
+                        <h3>Eotvos Lorand University</h3>
+                        <p class="location">Budapest, Hungary</p>
                         <p class="degree">Bachelor of Science - Computer Science</p>
-                        <p class="duration"><i data-lucide="calendar"></i> Sep 2014 - May 2018</p>
-                        <div class="education-details">
-                            <h4 class="courses-title">Key Courses:</h4>
-                            <div class="courses-list">
-                                <span class="course-tag">Data Structures</span>
-                                <span class="course-tag">Operating Systems</span>
-                                <span class="course-tag">Database Systems</span>
-                                <span class="course-tag">Web Development</span>
-                            </div>
-                        </div>
+                        <p class="duration">Sep 2021 - Jan 2025</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
-            <h2 class="section-title"><span class="section-number">05.</span> Projects</h2>
-            <div class="projects-filter">
-                <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="web">Web</button>
-                <button class="filter-btn" data-filter="mobile">Mobile</button>
-                <button class="filter-btn" data-filter="blockchain">Blockchain</button>
-                <button class="filter-btn" data-filter="ai">AI</button>
-            </div>
+            <h2 class="section-title"><span>05.</span> Projects</h2>
             <div class="projects-grid">
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/FinovaBank" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/Flowlet" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/finovabank.jpg" alt="FinovaBank" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="finovabank">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">FinovaBank</h3>
-                        <p class="project-description">Digital banking platform with advanced security features, real-time transactions, and AI-powered financial insights.</p>
+                        <img src="assets/images/Flowlet.jpg" alt="Flowlet" class="project-image">
+                        <h3>Flowlet</h3>
+                        <p class="project-description">
+                        Cloud‑agnostic, microservices‑based embedded finance platform offering scalable digital wallets, seamless payment processing, customizable card issuance, end-to-end KYC/AML compliance, robust ledger management, and advanced AI‑powered fraud detection and real-time analytics.                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Angular</span>
-                            <span class="tech-tag">Java Spring</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="blockchain">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/BlockGuardian" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/NexaFi" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/blockguardian.jpg" alt="BlockGuardian" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="blockguardian">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">BlockGuardian</h3>
-                        <p class="project-description">Blockchain security platform that monitors transactions, detects anomalies, and provides real-time alerts for suspicious activities.</p>
+                        <img src="assets/images/NexaFi.jpg" alt="NexaFi" class="project-image">
+                        <h3>NexaFi</h3>
+                        <p class="project-description">
+                        NexaFi is a revolutionary AI-powered financial operating system for SMBs, unifying accounting, payments, lending, and advisory within a cloud‑native, event‑driven microservices architecture enhanced by advanced ML workflows and distributed ledger integration.
+                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">Solidity</span>
-                            <span class="tech-tag">Web3.js</span>
+                        <span class="tech-tag">Python (FastAPI)</span>
+                        <span class="tech-tag">Node.js (NestJS)</span>
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">Kafka</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Terraform</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/CarbonXchange" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/QuantumAlpha" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/carbonxchange.jpg" alt="CarbonXchange" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="carbonxchange">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">CarbonXchange</h3>
-                        <p class="project-description">Carbon credit trading platform that connects businesses and individuals to offset their carbon footprint through verified projects.</p>
+                        <img src="assets/images/QuantumAlpha.jpg" alt="QuantumAlpha" class="project-image">
+                        <h3>QuantumAlpha</h3>
+                        <p class="project-description">
+                        QuantumAlpha is a next‑gen AI‑driven hedge‑fund platform unifying machine learning, deep learning, and reinforcement learning on multi‑source market data for backtesting, risk management, and real‑time trade execution in a scalable microservices architecture.
+                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Vue.js</span>
-                            <span class="tech-tag">Express</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">D3.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="ai">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/AlphaMind" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/Optionix" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/alphamind.jpg" alt="AlphaMind" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="alphamind">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">AlphaMind</h3>
-                        <p class="project-description">AI-powered learning platform that adapts to individual learning styles and provides personalized educational content.</p>
+                        <img src="assets/images/Optionix.jpg" alt="Optionix" class="project-image">
+                        <h3>Optionix</h3>
+                        <p class="project-description">
+                        Comprehensive options trading and analytics platform blending traditional finance and blockchain technology, featuring advanced pricing models, real‑time market data, AI‑powered trading signals, portfolio management, on‑chain smart contracts, and interactive risk visualizations.
+                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">TensorFlow</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">TimescaleDB</span>
+                        <span class="tech-tag">Redis</span>
+                        <span class="tech-tag">RabbitMQ</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Ethereum</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="mobile">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/Fluxora" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/Quantis" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/fluxora.jpg" alt="Fluxora" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="fluxora">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">Fluxora</h3>
-                        <p class="project-description">Mobile productivity app that helps users manage tasks, track habits, and improve focus through gamification techniques.</p>
+                        <img src="assets/images/Quantis.jpg" alt="Quantis" class="project-image">
+                        <h3>Quantis</h3>
+                        <p class="project-description">
+                        Quantis is a comprehensive quantitative trading and investment analytics platform combining advanced statistical models, machine learning algorithms, real‑time and alternative data processing, automated strategy backtesting and execution, risk management, portfolio optimization, and interactive dashboards—delivered via a scalable microservices architecture.
+                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React Native</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Redux</span>
-                            <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">InfluxDB</span>
+                        <span class="tech-tag">Celery</span>
+                        <span class="tech-tag">Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">React</span>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card" data-category="web">
+                <div class="project-card">
                     <div class="project-header">
                         <div class="project-type-icons">
                             <i data-lucide="folder"></i>
                             <i data-lucide="code"></i>
                         </div>
                         <div class="project-links">
-                            <a href="#" target="_blank" class="project-link"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/FinFlow" target="_blank" class="project-link"><i data-lucide="github"></i></a>
+                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
+                            <a href="https://github.com/abrar2030/RiskOptimizer" target="_blank"><i data-lucide="github"></i></a>
                         </div>
                     </div>
                     <div class="project-content">
-                        <div class="project-image-container">
-                            <img src="assets/images/finflow.jpg" alt="FinFlow" class="project-image">
-                            <div class="project-overlay">
-                                <button class="view-project-btn" data-project="finflow">View Project</button>
-                            </div>
-                        </div>
-                        <h3 class="project-title">FinFlow</h3>
-                        <p class="project-description">Financial management dashboard that visualizes spending patterns, predicts future expenses, and provides budget recommendations.</p>
+                        <img src="assets/images/RiskOptimizer.jpg" alt="RiskOptimizer" class="project-image">
+                        <h3>RiskOptimizer</h3>
+                        <p class="project-description">
+                        AI‑powered portfolio risk management platform combining advanced risk analysis (VaR, stress testing, volatility forecasting), portfolio optimization, predictive analytics, and blockchain‑backed transparency via smart contracts—delivered through a scalable microservices architecture with real‑time dashboards.
+                        </p>
                         <div class="project-tech">
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">Node.js</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Rust</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Kubernetes</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Blog section removed as per user request -->
-
         <section id="testimonials" class="testimonials">
-            <h2 class="section-title"><span class="section-number">07.</span> Testimonials</h2>
-            <div class="testimonials-slider">
-                <div class="testimonials-track">
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <i data-lucide="quote"></i>
-                            </div>
-                            <p class="testimonial-text">Abrar delivered an exceptional banking application that exceeded our expectations. His attention to detail and problem-solving skills were instrumental in the project's success.</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="assets/images/testimonial1.jpg" alt="Sarah Johnson">
+            <h2 class="section-title"><span>06.</span> Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonials-slider">
+                    <div class="testimonials-track">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
                                 </div>
-                                <div class="author-info">
-                                    <h4 class="author-name">Sarah Johnson</h4>
-                                    <p class="author-position">CTO, FinovaBank</p>
+                                <p class="testimonial-text">I had the pleasure of teaching Abrar Ahmed in "Computers in Practice" and "Computer Systems" courses at ELTE, where he consistently impressed me with his curiosity, analytical thinking, and strong grasp of core technical concepts. Abrar demonstrated excellent proficiency in Linux and showed a proactive approach to problem-solving. What truly set him apart was his performance as a Lab Demonstrator. Abrar not only supported his peers with clarity and patience but also contributed significantly to the improvement of lab activities through his innovative suggestions and hands-on expertise.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Chaman.jpeg" alt="Chaman Verma">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Chaman Verma, Ph.D., Post. Doc.</h4>
+                                        <p class="author-position">Assistant Professor, Faculty of Informatics ELTE IK, Eötvös Loránd University</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <i data-lucide="quote"></i>
-                            </div>
-                            <p class="testimonial-text">Working with Abrar was a pleasure. His technical expertise and ability to translate complex requirements into elegant solutions made our blockchain project a success.</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="assets/images/testimonial2.jpg" alt="Michael Chen">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
                                 </div>
-                                <div class="author-info">
-                                    <h4 class="author-name">Michael Chen</h4>
-                                    <p class="author-position">Lead Developer, BlockGuardian</p>
+                                <p class="testimonial-text">I had the pleasure of working and mentoring Abrar during his Student Developer internship at Ericsson Hungary. His dedication, curiosity, and work ethic were truly impressive. Abrar consistently paid attention to deadlines, asked insightful questions about technology and process, and balanced his internship with university coursework exceptionally well. His attention to detail and willingness to tackle challenges stood out. I believe Abrar has the potential to excel in both software development and management roles and I highly recommend him.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Arbab.jpeg" alt="Arbab Ali">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Arbab Ali</h4>
+                                        <p class="author-position">Microservices Developer | Java Spring Boot Developer | 5G Intelligent Automation Platform</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="testimonial-item">
-                        <div class="testimonial-content">
-                            <div class="testimonial-quote">
-                                <i data-lucide="quote"></i>
-                            </div>
-                            <p class="testimonial-text">Abrar's innovative approach to our carbon trading platform helped us create an intuitive and powerful tool that our users love. His dedication to quality is unmatched.</p>
-                            <div class="testimonial-author">
-                                <div class="author-image">
-                                    <img src="assets/images/testimonial3.jpg" alt="Emma Schmidt">
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
                                 </div>
-                                <div class="author-info">
-                                    <h4 class="author-name">Emma Schmidt</h4>
-                                    <p class="author-position">Product Manager, CarbonXchange</p>
+                                <p class="testimonial-text">I had the opportunity to work with Abrar at Ericsson and I highly recommend him as a colleague. He consistently demonstrated a remarkable ability to quickly grasp new concepts, coupled with a strong motivation and diligent work ethic. With his dedication and enthusiasm he contributed to the team's daily tasks. It is a pleasure working alongside him.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Zoltan.jpeg" alt="Zoltán Szabó">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Zoltán Szabó</h4>
+                                        <p class="author-position">DevOps | Microservices Developer | Java Spring Boot Developer</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
+                                </div>
+                                <p class="testimonial-text">I had the pleasure of working closely with Abrar Ahmed during his time at Ericsson as a Student Software Developer. Abrar showed great initiative in tackling complex problems and consistently delivered high-quality solutions within tight deadlines. His positive attitude and willingness to take on new challenges made him a valuable member of our team. His professionalism, teamwork, and communication skills were exemplary. I highly recommend Abrar to any organization seeking a talented and motivated software developer.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Begum.jpeg" alt="Begüm Özyılmaz Korkmaz">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Begüm Özyılmaz Korkmaz</h4>
+                                        <p class="author-position">Product Owner at Telefonica Germany</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
+                                </div>
+                                <p class="testimonial-text">Abrar is a student developer on my team. Despite being a junior member, his proactive engagement, eagerness to learn, and commitment to delivering quality work have made a valuable impact on our team, reflecting his promising potential in the agile development environment. He has the potential to be a valuable member of any agile team.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Danish.jpeg" alt="Danish Adeel">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Danish Adeel</h4>
+                                        <p class="author-position">Technologist | Agile Project Manager | Certified Scrum Master</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-item">
+                            <div class="testimonial-content">
+                                <div class="testimonial-quote">
+                                    <i data-lucide="quote"></i>
+                                </div>
+                                <p class="testimonial-text">I had the opportunity to work together with Abrar at Ericsson, and I'm pleased to recommend him. Abrar completed the onboarding process quickly and he started taking on challenging tasks very early on. I'm also glad to say that everyone could rely on him as a teammate, he is always available for technical discussions and is up to date on the latest features the team is working on. He'd make an excellent addition to any team.</p>
+                                <div class="testimonial-author">
+                                    <div class="author-image">
+                                        <img src="assets/images/Tamas.jpeg" alt="Tamás Márk Simon">
+                                    </div>
+                                    <div class="author-info">
+                                        <h4 class="author-name">Tamás Márk Simon</h4>
+                                        <p class="author-position">Senior Developer & Software Architect at Ericsson</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonials-controls">
-                    <button class="testimonial-arrow prev" aria-label="Previous testimonial">
-                        <i data-lucide="chevron-left"></i>
-                    </button>
-                    <div class="testimonials-dots">
-                        <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
-                        <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
-                        <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+                    <div class="testimonials-controls">
+                        <button class="testimonial-arrow prev" aria-label="Previous testimonial">
+                            <i data-lucide="chevron-left"></i>
+                        </button>
+                        <div class="testimonials-dots">
+                            <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
+                            <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
+                            <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
+                            <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
+                            <button class="testimonial-dot" data-index="4" aria-label="Testimonial 5"></button>
+                            <button class="testimonial-dot" data-index="5" aria-label="Testimonial 6"></button>
+                        </div>
+                        <button class="testimonial-arrow next" aria-label="Next testimonial">
+                            <i data-lucide="chevron-right"></i>
+                        </button>
                     </div>
-                    <button class="testimonial-arrow next" aria-label="Next testimonial">
-                        <i data-lucide="chevron-right"></i>
-                    </button>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="contact">
-            <h2 class="section-title"><span class="section-number">08.</span> Contact</h2>
+            <h2 class="section-title"><span>07.</span> Contact</h2>
             <div class="contact-container">
-                <div class="contact-info">
-                    <h3 class="contact-subtitle">Get In Touch</h3>
-                    <p class="contact-description">
-                        I'm currently open to new opportunities and collaborations. Whether you have a project in mind or just want to connect, feel free to reach out!
-                    </p>
-                    <div class="contact-methods">
+                <div class="contact-methods">
+                    <h3>Connect With Me</h3>
+                    <div class="contact-cards">
                         <div class="contact-card">
-                            <div class="contact-icon">
-                                <i data-lucide="mail"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4 class="contact-method-title">Email</h4>
-                                <p class="contact-method-value">abrarahmedpei@gmail.com</p>
-                                <a href="mailto:abrarahmedpei@gmail.com" class="contact-link">Send Email <i data-lucide="arrow-right"></i></a>
-                            </div>
+                            <i data-lucide="instagram"></i>
+                            <h4>Instagram</h4>
+                            <p>@abrar2o3o</p>
+                            <a href="https://www.instagram.com/abrar2o3o/" target="_blank" class="contact-link">
+                                Send Message <i data-lucide="arrow-right"></i>
+                            </a>
                         </div>
+                        
                         <div class="contact-card">
-                            <div class="contact-icon">
-                                <i data-lucide="linkedin"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4 class="contact-method-title">LinkedIn</h4>
-                                <p class="contact-method-value">linkedin.com/in/abrar2030</p>
-                                <a href="https://www.linkedin.com/in/abrar2030/" target="_blank" class="contact-link">Connect <i data-lucide="arrow-right"></i></a>
-                            </div>
+                            <i data-lucide="linkedin"></i>
+                            <h4>LinkedIn</h4>
+                            <p>@abrar2030</p>
+                            <a href="https://www.linkedin.com/in/abrar2030/" target="_blank" class="contact-link">
+                                Send Message <i data-lucide="arrow-right"></i>
+                            </a>
                         </div>
+                        
                         <div class="contact-card">
-                            <div class="contact-icon">
-                                <i data-lucide="github"></i>
-                            </div>
-                            <div class="contact-details">
-                                <h4 class="contact-method-title">GitHub</h4>
-                                <p class="contact-method-value">github.com/abrar2030</p>
-                                <a href="https://github.com/abrar2030" target="_blank" class="contact-link">Follow <i data-lucide="arrow-right"></i></a>
-                            </div>
+                            <i data-lucide="facebook"></i>
+                            <h4>Facebook</h4>
+                            <p>@abrar2O3O</p>
+                            <a href="https://www.facebook.com/abrar2O3O" target="_blank" class="contact-link">
+                                Send Message <i data-lucide="arrow-right"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="contact-card">
+                            <i data-lucide="github"></i>
+                            <h4>GitHub</h4>
+                            <p>@abrar2030</p>
+                            <a href="https://github.com/abrar2030" target="_blank" class="contact-link">
+                                Send Message <i data-lucide="arrow-right"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                <div class="contact-form-container">
-                    <h3 class="contact-subtitle">Send Me a Message</h3>
-                    <form id="contact-form" class="contact-form">
+                
+                <div class="contact-form">
+                    <h3>Send me an email</h3>
+                    <form id="contact-form">
                         <div class="form-group">
-                            <label for="name" class="form-label">Name</label>
-                            <div class="input-container">
-                                <i data-lucide="user"></i>
-                                <input type="text" id="name" placeholder="Your Name" required>
-                                <span class="input-focus-border"></span>
-                            </div>
-                            <span class="error-message" id="name-error"></span>
+                            <input type="text" placeholder="Enter your Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="email" class="form-label">Email</label>
-                            <div class="input-container">
-                                <i data-lucide="mail"></i>
-                                <input type="email" id="email" placeholder="Your Email" required>
-                                <span class="input-focus-border"></span>
-                            </div>
-                            <span class="error-message" id="email-error"></span>
+                            <input type="email" placeholder="Enter your Email" required>
                         </div>
                         <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <div class="input-container">
-                                <i data-lucide="file-text"></i>
-                                <input type="text" id="subject" placeholder="Subject" required>
-                                <span class="input-focus-border"></span>
-                            </div>
-                            <span class="error-message" id="subject-error"></span>
+                            <textarea placeholder="Enter your message" required></textarea>
                         </div>
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <div class="input-container textarea-container">
-                                <i data-lucide="message-square"></i>
-                                <textarea id="message" placeholder="Your Message" required></textarea>
-                                <span class="input-focus-border"></span>
-                            </div>
-                            <span class="error-message" id="message-error"></span>
-                        </div>
-                        <button type="submit" class="submit-btn">
-                            <span class="btn-text">Send Message</span>
-                            <i data-lucide="send"></i>
-                            <span class="btn-loader"></span>
-                        </button>
+                        <button type="submit" class="submit-btn">Send Email</button>
                     </form>
                 </div>
             </div>
         </section>
-
-        <!-- Chat bot removed as per user request -->
     </main>
-
-    <div class="project-modal">
-        <div class="modal-overlay"></div>
-        <div class="modal-container">
-            <button class="modal-close" aria-label="Close modal">
-                <i data-lucide="x"></i>
-            </button>
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Project Details</h3>
-                </div>
-                <div class="modal-body">
-                    <!-- Content will be dynamically loaded -->
-                </div>
-            </div>
-        </div>
-    </div>
 
     <footer>
         <div class="footer-content">
-            <div class="footer-logo">
-                <a href="#" class="logo-link">
-                    <span class="logo-text">Abrar</span>
-                    <span class="logo-dot"></span>
-                </a>
-            </div>
-            <div class="footer-links">
-                <div class="footer-nav">
-                    <a href="#about" class="footer-link">About</a>
-                    <a href="#skills" class="footer-link">Skills</a>
-                    <a href="#experience" class="footer-link">Experience</a>
-                    <a href="#projects" class="footer-link">Projects</a>
-                    <a href="#contact" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-social">
-                    <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank" class="footer-social-link">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank" class="footer-social-link">
-                        <i data-lucide="instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank" class="footer-social-link">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                    <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank" class="footer-social-link">
-                        <i data-lucide="facebook"></i>
-                    </a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">Designed & Built by Abrar Ahmed</p>
-                <p class="copyright">© 2025 All Rights Reserved</p>
-            </div>
+            <p>Designed & Built by Abrar Ahmed</p>
+            <p>© 2025 All Rights Reserved</p>
         </div>
     </footer>
 
-    <div class="back-to-top">
-        <button id="back-to-top-btn" aria-label="Back to top">
-            <i data-lucide="arrow-up"></i>
-        </button>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
