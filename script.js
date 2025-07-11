@@ -491,3 +491,52 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+
+    // Mobile Menu Functionality
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const mobileNavOverlay = document.getElementById('mobile-nav-overlay');
+    const mobileNavMenu = document.getElementById('mobile-nav-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-links a');
+
+    function toggleMobileMenu() {
+        mobileMenuToggle.classList.toggle('active');
+        mobileNavOverlay.classList.toggle('active');
+        mobileNavMenu.classList.toggle('active');
+        document.body.style.overflow = mobileNavMenu.classList.contains('active') ? 'hidden' : '';
+    }
+
+    function closeMobileMenu() {
+        mobileMenuToggle.classList.remove('active');
+        mobileNavOverlay.classList.remove('active');
+        mobileNavMenu.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    // Event listeners for mobile menu
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    }
+
+    if (mobileNavOverlay) {
+        mobileNavOverlay.addEventListener('click', closeMobileMenu);
+    }
+
+    // Close mobile menu when clicking on navigation links
+    mobileNavLinks.forEach(link => {
+        link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close mobile menu on window resize if screen becomes larger
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            closeMobileMenu();
+        }
+    });
+
+    // Prevent body scroll when mobile menu is open
+    document.addEventListener('touchmove', (e) => {
+        if (mobileNavMenu.classList.contains('active')) {
+            e.preventDefault();
+        }
+    }, { passive: false });
+
