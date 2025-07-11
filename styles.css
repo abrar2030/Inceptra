@@ -129,7 +129,6 @@ nav {
 }
 
 .mobile-nav-overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -137,10 +136,17 @@ nav {
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobile-nav-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
 .mobile-nav-menu {
-    display: none;
     position: fixed;
     top: 0;
     right: -100%;
@@ -1799,9 +1805,10 @@ footer {
         display: flex !important;
     }
     
-    .mobile-nav-overlay.active,
+    /* Ensure mobile menu is visible on mobile devices */
+    .mobile-nav-overlay,
     .mobile-nav-menu {
-        display: block !important;
+        display: block;
     }
     
     .social-sidebar, .email-sidebar {
@@ -2049,3 +2056,210 @@ section {
 .project-card, .education-item, .contact-card {
     animation: fadeIn 0.8s ease-out;
 }
+
+
+/* Enhanced Mobile Responsiveness */
+
+/* Extra small devices (phones, 320px and up) */
+@media (max-width: 320px) {
+    nav {
+        padding: 0.5rem 1rem !important;
+    }
+    
+    .logo a {
+        font-size: 1.2rem;
+    }
+    
+    .hero-title {
+        font-size: 1.8rem;
+        line-height: 1.2;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .hero-description {
+        font-size: 0.9rem;
+        padding: 0 0.5rem;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+    }
+    
+    .hero-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .nav-links, .social-links, .theme-toggle {
+        display: none !important;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex !important;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .experience-timeline::before {
+        left: 20px;
+    }
+    
+    .experience-item {
+        padding-left: 50px;
+    }
+    
+    .experience-item::before {
+        left: 15px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .nav-links a {
+        font-size: 0.9rem;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 768px) {
+    .mobile-nav-links a {
+        padding: 1.2rem 0;
+        font-size: 1.1rem;
+        min-height: 44px; /* Minimum touch target size */
+        display: flex;
+        align-items: center;
+    }
+    
+    .mobile-menu-toggle {
+        padding: 0.8rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .mobile-social-links a {
+        padding: 0.5rem;
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Ensure buttons are touch-friendly */
+    .btn, .download-btn, .contact-btn {
+        min-height: 44px;
+        padding: 0.8rem 1.5rem;
+    }
+    
+    /* Improve form elements for mobile */
+    .contact-form input,
+    .contact-form textarea {
+        min-height: 44px;
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    /* Better spacing for mobile */
+    section {
+        padding: 3rem 1rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Improve card layouts on mobile */
+    .project-card,
+    .education-item,
+    .contact-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Better text sizing for mobile */
+    .project-card h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project-card p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+    
+    /* Improve testimonial cards for mobile */
+    .testimonial-card {
+        padding: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .testimonial-text {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+}
+
+/* Landscape orientation improvements */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh;
+        padding: 2rem 1rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .mobile-nav-menu {
+        width: 60%;
+        max-width: 300px;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .mobile-menu-toggle span {
+        height: 2px;
+    }
+}
+
