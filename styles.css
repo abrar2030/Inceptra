@@ -1400,93 +1400,140 @@ section {
 /* Projects Section */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 16px;
+    border-radius: 12px;
     border: 1px solid var(--border-color);
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    height: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
     border-color: var(--accent-color);
 }
 
 .project-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    padding: 1rem;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1.5rem 1.5rem 0;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+    backdrop-filter: blur(10px);
+    border-radius: 0 12px 0 12px;
+}
+
+[data-theme="dark"] .project-header {
+    background: linear-gradient(135deg, rgba(37, 37, 37, 0.9), rgba(37, 37, 37, 0.7));
 }
 
 .project-type-icons {
-    display: flex;
-    gap: 0.5rem;
-    color: var(--text-secondary);
+    display: none;
 }
 
 .project-links {
     display: flex;
-    gap: 0.5rem;
+    gap: 0.25rem;
 }
 
 .project-links a {
     color: var(--text-secondary);
     transition: all 0.3s;
-    padding: 0.5rem;
-    border-radius: 50%;
+    padding: 0.4rem;
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .project-links a {
+    background: rgba(37, 37, 37, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .project-links a:hover {
     color: var(--accent-color);
     background: rgba(60, 179, 113, 0.1);
+    border-color: var(--accent-color);
+    transform: scale(1.05);
 }
 
 .project-content {
-    padding: 1.5rem;
+    padding: 0;
+    position: relative;
 }
 
 .project-image {
     width: 100%;
-    height: 200px;
+    height: 160px;
     object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 1.5rem;
+    border-radius: 0;
+    margin-bottom: 0;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.02);
+}
+
+.project-info {
+    padding: 1.25rem;
 }
 
 .project-content h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: var(--text-primary);
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
 }
 
 .project-description {
     color: var(--text-secondary);
-    line-height: 1.6;
-    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .project-tech {
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.4rem;
+    margin-top: auto;
 }
 
 .tech-tag {
     background: var(--tech-tag-bg);
     color: var(--tech-tag-text);
-    padding: 0.25rem 0.75rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
     font-weight: 500;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.tech-tag:hover {
+    background: var(--accent-color);
+    color: white;
+    transform: translateY(-1px);
 }
 
 /* Testimonials Section */
@@ -1825,6 +1872,35 @@ footer {
     
     .projects-grid {
         grid-template-columns: 1fr;
+        gap: 1.25rem;
+        padding: 0 1rem;
+    }
+    
+    .project-card {
+        margin: 0 auto;
+        max-width: 400px;
+    }
+    
+    .project-image {
+        height: 140px;
+    }
+    
+    .project-info {
+        padding: 1rem;
+    }
+    
+    .project-description {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .project-tech {
+        gap: 0.3rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.7rem;
+        padding: 0.15rem 0.5rem;
     }
     
     .testimonial-item {
