@@ -881,7 +881,7 @@ main {
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
-    bottom: 2rem;
+    bottom: 1rem; /* Moved much lower to avoid button overlap */
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -891,43 +891,58 @@ main {
 }
 
 .mouse {
-    width: 24px;
-    height: 40px;
-    border: 2px solid var(--text-secondary);
-    border-radius: 12px;
+    width: 28px;
+    height: 48px;
+    border: 3px solid var(--accent-color);
+    border-radius: 16px;
     position: relative;
+    background: linear-gradient(135deg, rgba(60, 179, 113, 0.1), rgba(76, 217, 142, 0.05));
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 25px rgba(60, 179, 113, 0.2);
+    transition: all 0.3s ease;
+}
+
+.mouse:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 35px rgba(60, 179, 113, 0.3);
+    border-color: #4cd98e;
 }
 
 .wheel {
-    width: 4px;
-    height: 8px;
-    background-color: var(--text-secondary);
-    border-radius: 2px;
+    width: 6px;
+    height: 12px;
+    background: linear-gradient(180deg, var(--accent-color), #4cd98e);
+    border-radius: 3px;
     position: absolute;
-    top: 8px;
+    top: 12px;
     left: 50%;
     transform: translateX(-50%);
-    animation: scroll 2s infinite;
+    animation: scroll 2.5s infinite ease-in-out;
+    box-shadow: 0 2px 8px rgba(60, 179, 113, 0.4);
 }
 
 @keyframes scroll {
-    0% { opacity: 1; top: 8px; }
-    100% { opacity: 0; top: 24px; }
+    0% { opacity: 1; top: 12px; transform: translateX(-50%) scale(1); }
+    50% { opacity: 0.7; transform: translateX(-50%) scale(0.8); }
+    100% { opacity: 0; top: 32px; transform: translateX(-50%) scale(0.6); }
 }
 
 .scroll-arrows {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 8px;
+    margin-top: 1rem;
 }
 
 .scroll-arrow {
-    width: 8px;
-    height: 8px;
-    border-right: 2px solid var(--text-secondary);
-    border-bottom: 2px solid var(--text-secondary);
+    width: 12px;
+    height: 12px;
+    border: 2px solid;
+    border-color: transparent var(--accent-color) var(--accent-color) transparent;
     transform: rotate(45deg);
     animation: bounce 2s infinite;
+    box-shadow: 0 2px 8px rgba(60, 179, 113, 0.3);
+    border-radius: 2px;
 }
 
 .scroll-arrow:nth-child(2) {
@@ -2445,6 +2460,91 @@ footer {
 .footer-content p {
     color: var(--text-secondary);
     margin-bottom: 0.5rem;
+}
+
+/* Mobile enhancements for scroll indicator */
+@media (max-width: 768px) {
+    .scroll-indicator {
+        bottom: 1rem; /* Moved much lower for mobile to avoid button overlap */
+        transition: all 0.3s ease;
+    }
+    
+    .mouse {
+        width: 24px;
+        height: 42px;
+        border: 2px solid var(--accent-color);
+        background: linear-gradient(135deg, rgba(60, 179, 113, 0.12), rgba(76, 217, 142, 0.06));
+        box-shadow: 0 6px 20px rgba(60, 179, 113, 0.2);
+    }
+    
+    .wheel {
+        width: 5px;
+        height: 10px;
+        top: 10px;
+        box-shadow: 0 2px 6px rgba(60, 179, 113, 0.4);
+    }
+    
+    .scroll-arrows {
+        gap: 6px;
+        margin-top: 1rem;
+    }
+    
+    .scroll-arrow {
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+        box-shadow: 0 2px 6px rgba(60, 179, 113, 0.3);
+    }
+}
+
+/* Desktop enhancements for scroll indicator */
+@media (min-width: 769px) {
+    .scroll-indicator {
+        bottom: 1.5rem; /* Moved much lower for desktop to avoid button overlap */
+        transition: all 0.3s ease;
+    }
+    
+    .scroll-indicator:hover {
+        transform: translateX(-50%) scale(1.1);
+    }
+    
+    .mouse {
+        width: 32px;
+        height: 52px;
+        border: 3px solid var(--accent-color);
+        background: linear-gradient(135deg, rgba(60, 179, 113, 0.15), rgba(76, 217, 142, 0.08));
+        box-shadow: 0 10px 30px rgba(60, 179, 113, 0.25);
+    }
+    
+    .mouse:hover {
+        transform: scale(1.15);
+        box-shadow: 0 15px 40px rgba(60, 179, 113, 0.35);
+        border-color: #4cd98e;
+    }
+    
+    .wheel {
+        width: 8px;
+        height: 14px;
+        top: 14px;
+        box-shadow: 0 3px 10px rgba(60, 179, 113, 0.5);
+    }
+    
+    .scroll-arrows {
+        gap: 10px;
+        margin-top: 1.5rem;
+    }
+    
+    .scroll-arrow {
+        width: 14px;
+        height: 14px;
+        border-width: 3px;
+        box-shadow: 0 3px 10px rgba(60, 179, 113, 0.4);
+    }
+    
+    .scroll-arrow:hover {
+        transform: rotate(45deg) scale(1.2);
+        border-color: #4cd98e;
+    }
 }
 
 /* Responsive Design */
