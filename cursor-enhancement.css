@@ -1,0 +1,165 @@
+/* Enhanced Custom Mouse Pointer Styles */
+
+/* Hide default cursor */
+* {
+    cursor: none !important;
+}
+
+/* Custom cursor container */
+.custom-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: linear-gradient(135deg, var(--accent-color), #4cd98e);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
+    transform: translate(-50%, -50%);
+    box-shadow: 
+        0 0 20px rgba(60, 179, 113, 0.6),
+        0 0 40px rgba(60, 179, 113, 0.4),
+        0 0 60px rgba(60, 179, 113, 0.2);
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, rgba(60, 179, 113, 0.8), rgba(76, 217, 142, 0.6));
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+/* Cursor outer ring */
+.cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgba(60, 179, 113, 0.3);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    transition: all 0.2s ease;
+    animation: rotate 4s linear infinite;
+}
+
+/* Pulse animation for main cursor */
+@keyframes pulse {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+        box-shadow: 
+            0 0 20px rgba(60, 179, 113, 0.6),
+            0 0 40px rgba(60, 179, 113, 0.4),
+            0 0 60px rgba(60, 179, 113, 0.2);
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(1.1);
+        box-shadow: 
+            0 0 30px rgba(60, 179, 113, 0.8),
+            0 0 50px rgba(60, 179, 113, 0.6),
+            0 0 80px rgba(60, 179, 113, 0.3);
+    }
+}
+
+/* Rotation animation for outer ring */
+@keyframes rotate {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Particle effects for special interactions */
+.cursor-particle {
+    position: fixed;
+    width: 4px;
+    height: 4px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9996;
+    animation: particle-float 1s ease-out forwards;
+}
+
+@keyframes particle-float {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) translateY(-50px);
+    }
+}
+
+/* Dark theme adjustments */
+[data-theme="dark"] .custom-cursor {
+    background: linear-gradient(135deg, #4cd98e, #66bb6a);
+    box-shadow: 
+        0 0 25px rgba(76, 217, 142, 0.7),
+        0 0 45px rgba(76, 217, 142, 0.5),
+        0 0 65px rgba(76, 217, 142, 0.3);
+}
+
+[data-theme="dark"] .cursor-ring {
+    border-color: rgba(76, 217, 142, 0.4);
+}
+
+[data-theme="dark"] .cursor-trail {
+    background: linear-gradient(135deg, rgba(76, 217, 142, 0.9), rgba(102, 187, 106, 0.7));
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .custom-cursor,
+    .cursor-ring,
+    .cursor-trail {
+        display: none;
+    }
+}
+
+/* Accessibility - respect user preferences */
+@media (prefers-reduced-motion: reduce) {
+    .custom-cursor,
+    .cursor-ring,
+    .cursor-trail {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+    .custom-cursor {
+        background: #000000;
+        box-shadow: 0 0 10px #ffffff;
+    }
+    
+    [data-theme="dark"] .custom-cursor {
+        background: #ffffff;
+        box-shadow: 0 0 10px #000000;
+    }
+}
+
