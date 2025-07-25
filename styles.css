@@ -2366,7 +2366,7 @@ footer {
 /* Mobile enhancements for scroll indicator */
 @media (max-width: 768px) {
     .scroll-indicator {
-        bottom: 5rem; /* Moved even lower for mobile to avoid button overlap */
+        bottom: -5rem; /* Moved even lower for mobile to avoid button overlap */
         transition: all 0.3s ease;
     }
     
