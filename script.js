@@ -442,9 +442,9 @@ function initTypingEffect() {
     if (!typingElement) return;
     
     const phrases = [
-        'FullStack Engineer',
-        'Cloud Engineer',
-        'DevOps Engineer',
+        'Quantitative Software Engineer',
+        'Data & Cloud Engineer (Financial Systems)',
+        'Financial Engineer / Quantitative Analyst',
     ];
     
     let phraseIndex = 0;
