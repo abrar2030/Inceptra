@@ -173,46 +173,8 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(element);
     });
 
-    // Skills Section Functionality
-    const skillTabs = document.querySelectorAll('.skill-tab');
-    const skillCategories = document.querySelectorAll('.skill-category');
-    const skillProgress = document.querySelectorAll('.skill-progress');
-    
-    if (skillTabs.length > 0 && skillCategories.length > 0) {
-        // Tab switching
-        skillTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                const target = this.getAttribute('data-tab');
-                
-                // Update active tab
-                skillTabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-                
-                // Show corresponding category
-                skillCategories.forEach(category => {
-                    category.classList.remove('active');
-                    if (category.id === target) {
-                        category.classList.add('active');
-                    }
-                });
-            });
-        });
-        
-        // Animate skill progress bars when they come into view
-        const progressObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progress = entry.target.getAttribute('data-progress');
-                    entry.target.style.width = `${progress}%`;
-                    progressObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 });
-        
-        skillProgress.forEach(bar => {
-            progressObserver.observe(bar);
-        });
-    }
+    // Skills Section Functionality: Removed old tab and progress bar logic.
+    // The new skills section is a static grid and does not require JavaScript.
 
     // Testimonials Slider Functionality
     const testimonialsTrack = document.querySelector('.testimonials-track');
