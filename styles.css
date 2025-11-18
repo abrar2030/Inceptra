@@ -3180,3 +3180,96 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
+/* --- Publications Section Enhancements (Minimalist Border Style) --- */
+
+.publications {
+    padding: 80px 0;
+}
+
+.publication-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px; /* Minimal gap for border effect */
+    margin-top: 40px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.publication-item {
+    position: relative; /* Needed for absolute positioning of the icon link */
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    background-color: var(--card-bg);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.publication-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.publication-item:hover {
+    background-color: var(--bg-secondary);
+    transform: translateX(5px);
+}
+
+
+
+.publication-content {
+    flex-grow: 1;
+}
+
+.publication-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.publication-authors {
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+}
+
+.publication-abstract {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 0; /* Remove bottom margin since link is now absolute */
+    line-height: 1.6;
+}
+
+.publication-icon-link {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: var(--text-secondary);
+    transition: color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.publication-icon-link:hover {
+    color: var(--accent-color);
+    transform: scale(1.1);
+}
+
+.publication-icon-link i {
+    width: 20px;
+    height: 20px;
+    stroke-width: 2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .publication-item {
+        padding: 15px 20px;
+    }
+    .publication-icon-link {
+        top: 15px;
+        right: 15px;
+    }
+}
