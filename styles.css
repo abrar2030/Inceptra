@@ -3272,3 +3272,54 @@ footer {
         right: 15px;
     }
 }
+
+/* --- Who I Am Card Styling --- */
+.who-i-am-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.who-i-am-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
+    transition: all 0.3s ease;
+}
+
+.who-i-am-card:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.who-i-am-card:hover::before {
+    height: 8px;
+}
+
+.who-i-am-card .about-subtitle {
+    color: var(--accent-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.who-i-am-card .about-description {
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Ensure the card takes up the full width of its container */
+.about-text-section {
+    flex: 1;
+}
