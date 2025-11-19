@@ -3273,14 +3273,18 @@ footer {
     }
 }
 
-/* --- Who I Am Card Styling --- */
+/* --- Who I Am Card Styling (Glassmorphism Enhanced) --- */
 .who-i-am-card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    /* Glassmorphism Effect */
+    background: rgba(var(--accent-color-rgb), 0.05); /* Very subtle background */
+    backdrop-filter: blur(10px); /* The key glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    
+    border: 1px solid rgba(var(--accent-color-rgb), 0.3); /* Semi-transparent border */
+    border-radius: 20px; /* Larger radius */
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); /* Glassmorphism shadow */
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
     position: relative;
     overflow: hidden;
 }
@@ -3291,32 +3295,36 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 5px;
-    background: linear-gradient(90deg, var(--accent-color), var(--accent-color));
-    transition: all 0.3s ease;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color), #4cd98e);
+    transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 .who-i-am-card:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 16px 64px 0 rgba(31, 38, 135, 0.45);
+    transform: translateY(-8px); /* More pronounced lift */
+    border: 1px solid rgba(var(--accent-color-rgb), 0.5);
 }
 
 .who-i-am-card:hover::before {
-    height: 8px;
+    height: 6px;
+    background: linear-gradient(90deg, #4cd98e, var(--accent-color));
 }
 
 .who-i-am-card .about-subtitle {
     color: var(--accent-color);
-    font-size: 1.5rem;
+    font-size: 1.75rem; /* Even larger font */
     margin-bottom: 15px;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 2px solid rgba(var(--accent-color-rgb), 0.3);
     padding-bottom: 10px;
     display: inline-block;
+    font-weight: 800; /* Bolder font */
 }
 
 .who-i-am-card .about-description {
-    line-height: 1.7;
+    line-height: 1.8;
     margin-bottom: 15px;
+    color: var(--text-primary); /* Use primary text color for better contrast on glass */
 }
 
 /* Ensure the card takes up the full width of its container */
