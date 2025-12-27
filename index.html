@@ -1,790 +1,1107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abrar - Software Engineer</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="cursor-enhancement.css">
-    <link rel="icon" href="favicon.ico">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="cursor-enhancement.css" />
+    <link rel="icon" href="favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&family=JetBrains+Mono:wght@100..800&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="#">Abrar</a>
-	            </div>
-            <div class="nav-links">
-                <a href="#about">1.About</a>
-                <a href="#skills">2.Skills</a>
-                <a href="#experience">3.Work Experience</a>
-                <a href="#education">4.Education</a>
-                <a href="#projects">5.Projects</a>
-                <a href="#publications">6.Publications</a>
-                <a href="#testimonials">7.Testimonials</a>
-                <a href="#contact">8.Contact</a>
-
-            </div>
-            <div class="social-links">
-                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank">
-                    <i data-lucide="github"></i>
-                </a>
-                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank">
-                    <i data-lucide="instagram"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank">
-                    <i data-lucide="linkedin"></i>
-                </a>
-                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank">
-                    <i data-lucide="facebook"></i>
-                </a>
-            </div>
-            <div class="theme-toggle">
-                <button id="theme-toggle-btn">
-                    <i data-lucide="moon"></i>
-                </button>
-            </div>
-            
-            <!-- Mobile Menu Toggle -->
-            <div class="mobile-menu-toggle" id="mobile-menu-toggle">
-                <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </nav>
-        
-        <!-- Mobile Navigation Menu -->
-        <div class="mobile-menu" id="mobile-menu">
-            <div class="mobile-menu-container">
-                <div class="mobile-nav-links">
-                    <a href="#about">About</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#experience">Work Experience</a>
-                    <a href="#education">Education</a>
-                    <a href="#projects">Projects</a>
-                    <a href="#publications">Publications</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#contact">Contact</a>
-
-                </div>
-                <div class="mobile-social-links">
-                    <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank">
-                        <i data-lucide="github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank">
-                        <i data-lucide="instagram"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank">
-                        <i data-lucide="linkedin"></i>
-                    </a>
-                    <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank">
-                        <i data-lucide="facebook"></i>
-                    </a>
-                </div>
-            </div>
+      <nav>
+        <div class="logo">
+          <a href="#">Abrar</a>
         </div>
+        <div class="nav-links">
+          <a href="#about">1.About</a>
+          <a href="#skills">2.Skills</a>
+          <a href="#experience">3.Work Experience</a>
+          <a href="#education">4.Education</a>
+          <a href="#projects">5.Projects</a>
+          <a href="#publications">6.Publications</a>
+          <a href="#testimonials">7.Testimonials</a>
+          <a href="#contact">8.Contact</a>
+        </div>
+        <div class="social-links">
+          <a
+            href="https://github.com/abrar2030"
+            title="GitHub Profile"
+            target="_blank"
+          >
+            <i data-lucide="github"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/abrar2o3o/"
+            title="Instagram Profile"
+            target="_blank"
+          >
+            <i data-lucide="instagram"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/abrar2030/"
+            title="LinkedIn Profile"
+            target="_blank"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/abrar2O3O"
+            title="Facebook Profile"
+            target="_blank"
+          >
+            <i data-lucide="facebook"></i>
+          </a>
+        </div>
+        <div class="theme-toggle">
+          <button id="theme-toggle-btn">
+            <i data-lucide="moon"></i>
+          </button>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <div class="mobile-menu-toggle" id="mobile-menu-toggle">
+          <button id="mobile-menu-btn" aria-label="Toggle mobile menu">
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+            <span class="hamburger-line"></span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- Mobile Navigation Menu -->
+      <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-menu-container">
+          <div class="mobile-nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#experience">Work Experience</a>
+            <a href="#education">Education</a>
+            <a href="#projects">Projects</a>
+            <a href="#publications">Publications</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <div class="mobile-social-links">
+            <a
+              href="https://github.com/abrar2030"
+              title="GitHub Profile"
+              target="_blank"
+            >
+              <i data-lucide="github"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/abrar2o3o/"
+              title="Instagram Profile"
+              target="_blank"
+            >
+              <i data-lucide="instagram"></i>
+            </a>
+            <a
+              href="https://www.linkedin.com/in/abrar2030/"
+              title="LinkedIn Profile"
+              target="_blank"
+            >
+              <i data-lucide="linkedin"></i>
+            </a>
+            <a
+              href="https://www.facebook.com/abrar2O3O"
+              title="Facebook Profile"
+              target="_blank"
+            >
+              <i data-lucide="facebook"></i>
+            </a>
+          </div>
+        </div>
+      </div>
     </header>
 
     <!-- Left fixed social icons -->
     <div class="social-sidebar">
-        <ul class="social-sidebar-list">
-            <li>
-                <a href="https://github.com/abrar2030" title="GitHub Profile" target="_blank">
-                    <i data-lucide="github"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.instagram.com/abrar2o3o/" title="Instagram Profile" target="_blank">
-                    <i data-lucide="instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/abrar2030/" title="LinkedIn Profile" target="_blank">
-                    <i data-lucide="linkedin"></i>
-                </a>
-            </li>
-            <li>
-                <a href="https://www.facebook.com/abrar2O3O" title="Facebook Profile" target="_blank">
-                    <i data-lucide="facebook"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="sidebar-line"></div>
+      <ul class="social-sidebar-list">
+        <li>
+          <a
+            href="https://github.com/abrar2030"
+            title="GitHub Profile"
+            target="_blank"
+          >
+            <i data-lucide="github"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.instagram.com/abrar2o3o/"
+            title="Instagram Profile"
+            target="_blank"
+          >
+            <i data-lucide="instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/abrar2030/"
+            title="LinkedIn Profile"
+            target="_blank"
+          >
+            <i data-lucide="linkedin"></i>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.facebook.com/abrar2O3O"
+            title="Facebook Profile"
+            target="_blank"
+          >
+            <i data-lucide="facebook"></i>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-line"></div>
     </div>
 
     <!-- Right fixed email -->
     <div class="email-sidebar">
-        <a href="mailto:abrarahmedpei@gmail.com">abrarahmedpei@gmail.com</a>
-        <div class="sidebar-line"></div>
+      <a href="mailto:abrarahmedpei@gmail.com">abrarahmedpei@gmail.com</a>
+      <div class="sidebar-line"></div>
     </div>
 
     <main>
-        <section class="hero">
-            <div id="particles-js" class="particles-container"></div>
-            <div class="hero-content">
-                <div class="intro-text">
-                    <p class="greeting">Hi, my name is</p>
-                    <h1 class="hero-title">
-                        <span class="hero-name">Abrar Ahmed</span>
-                        <span class="hero-title-bg"></span>
-                    </h1>
-                    <h2 class="hero-subtitle">
-                        <span class="typing-text"></span>
-                        <span class="cursor-typing">|</span>
-                    </h2>
-                    <p class="description">
-                        I specialize in transforming complex ideas into seamless digital experiences, 
-                        focusing on clean, efficient code and innovative solutions to meet your specific needs.
-                    </p>
-                    <div class="cta-buttons">
-                        <a href="#contact" class="contact-btn">Contact Me <i data-lucide="arrow-right"></i></a>
-                        <a href="#about" class="scroll-btn">Explore My Work <i data-lucide="arrow-down"></i></a>
-                    </div>
-                </div>
-                <div class="hero-3d-element">
-                    <div class="floating-cube-container">
-                        <div class="floating-cube">
-                            <div class="cube-face front"></div>
-                            <div class="cube-face back"></div>
-                            <div class="cube-face right"></div>
-                            <div class="cube-face left"></div>
-                            <div class="cube-face top"></div>
-                            <div class="cube-face bottom"></div>
-                        </div>
-                    </div>
-                </div>
+      <section class="hero">
+        <div id="particles-js" class="particles-container"></div>
+        <div class="hero-content">
+          <div class="intro-text">
+            <p class="greeting">Hi, my name is</p>
+            <h1 class="hero-title">
+              <span class="hero-name">Abrar Ahmed</span>
+              <span class="hero-title-bg"></span>
+            </h1>
+            <h2 class="hero-subtitle">
+              <span class="typing-text"></span>
+              <span class="cursor-typing">|</span>
+            </h2>
+            <p class="description">
+              I specialize in transforming complex ideas into seamless digital
+              experiences, focusing on clean, efficient code and innovative
+              solutions to meet your specific needs.
+            </p>
+            <div class="cta-buttons">
+              <a href="#contact" class="contact-btn"
+                >Contact Me <i data-lucide="arrow-right"></i
+              ></a>
+              <a href="#about" class="scroll-btn"
+                >Explore My Work <i data-lucide="arrow-down"></i
+              ></a>
             </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="scroll-arrows">
-                    <span class="scroll-arrow"></span>
-                    <span class="scroll-arrow"></span>
-                    <span class="scroll-arrow"></span>
-                </div>
+          </div>
+          <div class="hero-3d-element">
+            <div class="floating-cube-container">
+              <div class="floating-cube">
+                <div class="cube-face front"></div>
+                <div class="cube-face back"></div>
+                <div class="cube-face right"></div>
+                <div class="cube-face left"></div>
+                <div class="cube-face top"></div>
+                <div class="cube-face bottom"></div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="scroll-indicator">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="scroll-arrows">
+            <span class="scroll-arrow"></span>
+            <span class="scroll-arrow"></span>
+            <span class="scroll-arrow"></span>
+          </div>
+        </div>
+      </section>
 
-        <section id="about" class="about">
-            <h2 class="section-title"><span>01.</span> About Me</h2>
-            <div class="about-container">
-                <div class="about-main-content">
-                    <div class="about-text-section">
-                        <div class="about-intro who-i-am-card">
-                            <h3 class="about-subtitle">Who I Am</h3>
-                            <p class="about-description">
-                                I’m a Financial Engineering enthusiast and Software Engineer specializing in quantitative modeling, algorithmic trading systems, and data-driven financial analytics. I leverage Python, R, and SQL with libraries such as NumPy, Pandas, scikit-learn, and PyPortfolioOpt to model risk, price derivatives, and optimize portfolios using machine learning and stochastic methods. 
-                                I develop scalable data pipelines and analytical dashboards powered by AWS, Docker, and Kubernetes, ensuring automation, performance, and reliability in financial computation workflows.
-                            </p>
-                            <p class="about-description">
-                                I’m passionate about building intelligent trading frameworks, risk management systems, and end-to-end data infrastructures that integrate econometrics, optimization, and deep learning models. I collaborate across disciplines to deliver scalable, interpretable, and impactful financial solutions that bridge advanced quantitative research with production-grade engineering.
-                            </p>
-                        </div>
-                        
-
-                    </div>
-                    
-                    <div class="about-profile-section">
-                        <div class="profile-card">
-                            <div class="profile-image-container">
-                                <div class="profile-background-decoration"></div>
-                                <img src="assets/images/profile.png" alt="Profile Photo" class="profile-image">
-                                <div class="profile-status">
-                                    <div class="status-indicator"></div>
-                                    <span>Available for opportunities</span>
-                                </div>
-                            </div>
-                            
-                            <div class="profile-info">
-                                <h3 class="profile-name">Abrar Ahmed</h3>
-                                <p class="profile-title">Software Engineer</p>
-                                <div class="profile-location">
-                                    <i data-lucide="map-pin"></i>
-                                    <span>Islamabad, Pakistan</span>
-                                </div>
-                            </div>
-                            
-                            <div class="profile-stats">
-                                <div class="stat-item">
-                                    <span class="stat-number">1+</span>
-                                    <span class="stat-label">Years Experience</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-number">20+</span>
-                                    <span class="stat-label">Projects Completed</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="about-actions">
-                    <a href="" class="download-btn primary">
-                        <i data-lucide="download"></i>
-                        <span>Download CV</span>
-                    </a>
-                    <a href="#contact" class="contact-btn secondary">
-                        <i data-lucide="message-circle"></i>
-                        <span>Let's Talk</span>
-                    </a>
-                </div>
+      <section id="about" class="about">
+        <h2 class="section-title"><span>01.</span> About Me</h2>
+        <div class="about-container">
+          <div class="about-main-content">
+            <div class="about-text-section">
+              <div class="about-intro who-i-am-card">
+                <h3 class="about-subtitle">Who I Am</h3>
+                <p class="about-description">
+                  I’m a Financial Engineering enthusiast and Software Engineer
+                  specializing in quantitative modeling, algorithmic trading
+                  systems, and data-driven financial analytics. I leverage
+                  Python, R, and SQL with libraries such as NumPy, Pandas,
+                  scikit-learn, and PyPortfolioOpt to model risk, price
+                  derivatives, and optimize portfolios using machine learning
+                  and stochastic methods. I develop scalable data pipelines and
+                  analytical dashboards powered by AWS, Docker, and Kubernetes,
+                  ensuring automation, performance, and reliability in financial
+                  computation workflows.
+                </p>
+                <p class="about-description">
+                  I’m passionate about building intelligent trading frameworks,
+                  risk management systems, and end-to-end data infrastructures
+                  that integrate econometrics, optimization, and deep learning
+                  models. I collaborate across disciplines to deliver scalable,
+                  interpretable, and impactful financial solutions that bridge
+                  advanced quantitative research with production-grade
+                  engineering.
+                </p>
+              </div>
             </div>
-        </section>
 
-        <section id="skills" class="skills">
-            <h2 class="section-title"><span>02.</span> Skills</h2>
-	            <div class="skills-grid">
-	                <div class="skill-card">
-	                    <i data-lucide="brain-circuit" class="card-icon"></i>
-	                    <h3>AI & Machine Learning</h3>
-	                    <ul class="expertise-list">
-	                        <li>Deep Learning (PyTorch, TensorFlow)</li>
-	                        <li>Natural Language Processing (NLP)</li>
-	                        <li>Computer Vision (OpenCV)</li>
-	                        <li>Reinforcement Learning</li>
-	                        <li>MLOps (MLflow, Kubeflow)</li>
-	                    </ul>
-	                </div>
-                <div class="skill-card">
-                    <i data-lucide="trending-up" class="card-icon"></i>
-                    <h3>Quantitative Finance & Modeling</h3>
-                    <ul class="expertise-list">
-                        <li>Derivatives Pricing</li>
-                        <li>Risk Management (VaR, CVaR)</li>
-                        <li>Portfolio Optimization</li>
-                        <li>Time Series Analysis (ARIMA, GARCH)</li>
-                    </ul>
+            <div class="about-profile-section">
+              <div class="profile-card">
+                <div class="profile-image-container">
+                  <div class="profile-background-decoration"></div>
+                  <img
+                    src="assets/images/profile.png"
+                    alt="Profile Photo"
+                    class="profile-image"
+                  />
+                  <div class="profile-status">
+                    <div class="status-indicator"></div>
+                    <span>Available for opportunities</span>
+                  </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="code" class="card-icon"></i>
-                    <h3>Programming & Data Science</h3>
-                    <ul class="expertise-list">
-                        <li>Python (NumPy, Pandas, ML)</li>
-                        <li>R (Statistical Modeling)</li>
-                        <li>C++ (HPC)</li>
-                        <li>SQL (Advanced Querying, ETL)</li>
 
-                    </ul>
+                <div class="profile-info">
+                  <h3 class="profile-name">Abrar Ahmed</h3>
+                  <p class="profile-title">Software Engineer</p>
+                  <div class="profile-location">
+                    <i data-lucide="map-pin"></i>
+                    <span>Islamabad, Pakistan</span>
+                  </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="server" class="card-icon"></i>
-                    <h3>Financial Platforms & Tools</h3>
-                    <ul class="expertise-list">
-                        <li>Bloomberg Terminal</li>
-                        <li>Refinitiv Eikon</li>
-                        <li>MATLAB</li>
-                        <li>Jupyter/RStudio</li>
-                    </ul>
+
+                <div class="profile-stats">
+                  <div class="stat-item">
+                    <span class="stat-number">1+</span>
+                    <span class="stat-label">Years Experience</span>
+                  </div>
+                  <div class="stat-item">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">Projects Completed</span>
+                  </div>
                 </div>
-                <div class="skill-card">
-                    <i data-lucide="cloud" class="card-icon"></i>
-                    <h3>Cloud & Infrastructure</h3>
-                    <ul class="expertise-list">
-                        <li>AWS/Azure/GCP (Data Lake/Warehouse)</li>
-                        <li>Docker/Kubernetes</li>
-                        <li>Apache Airflow</li>
-                        <li>Kafka / Stream Processing</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <i data-lucide="zap" class="card-icon"></i>
-                    <h3>Algorithmic Trading & DeFi</h3>
-                    <ul class="expertise-list">
-                        <li>Algorithmic Trading & Systems</li>
-                        <li>High-Frequency Trading (HFT)</li>
-                        <li>Smart Contract Development (Solidity)</li>
-                        <li>Blockchain & Decentralized Finance (DeFi)</li>
-                        <li>Low-Latency System Design</li>
-                    </ul>
-                </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <section id="experience" class="experience">
-            <h2 class="section-title"><span>03.</span> Work Experience</h2>
-            <div class="experience-container">
-                <div class="experience-item">
-                    <div class="company-logo">
-                        <img src="assets/icons/ELTE.jpg" alt="Company Logo">
-                    </div>
-                    <div class="experience-content">
-                        <h3>Eotvos Lorand University</h3>
-                        <p class="location">Budapest, Hungary</p>
-                        <h4>Teaching Assistant</h4>
-                        <p class="duration">Feb 2025 - May 2025</p>
-                        <div class="responsibilities">
-                            <h5>Responsibilities:</h5>
-                            <ul>
-                                <li>Supported students in Python, OS, and Algorithms & Data Structures, aiding with concepts & bugs</li>
-                                <li>Conducted tutorials, reviewed assignments, and consistently aided instructors with delivery</li>
-                                <li>Collaborated with faculty to design lab tasks and practice problems tailored to course goals and needs</li>
-                                <li>Provided one-on-one mentorship during office hours to reinforce outcomes & boost academic success</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+          <div class="about-actions">
+            <a href="" class="download-btn primary">
+              <i data-lucide="download"></i>
+              <span>Download CV</span>
+            </a>
+            <a href="#contact" class="contact-btn secondary">
+              <i data-lucide="message-circle"></i>
+              <span>Let's Talk</span>
+            </a>
+          </div>
+        </div>
+      </section>
 
-                <div class="experience-item">
-                    <div class="company-logo">
-                        <img src="assets/icons/Ericsson.png" alt="Company Logo">
-                    </div>
-                    <div class="experience-content">
-                        <h3>Ericsson</h3>
-                        <p class="location">Budapest, Hungary</p>
-                        <h4>Student Developer</h4>
-                        <p class="duration">August 2023 - October 2024</p>
-                        <div class="responsibilities">
-                            <h5>Responsibilities:</h5>
-                        <ul>
-                            <li>Developed and maintained data-driven applications in Python and automation workflows.</li>
-                            <li>Automated data ingestion and transformation pipelines using Python, Airflow, and Bash scripting.</li>
-                            <li>Applied machine learning models for anomaly detection and improving financial data quality metrics.</li>
-                            <li>Created interactive dashboards and visualizations using Plotly, Matplotlib, and Seaborn for real-time insights.</li>
-                            <li>Worked with Snowflake and PostgreSQL databases to perform data transformation, integration, and loading operations.</li>
-                            <li>Built and optimized SQL and ETL pipelines using PostgreSQL and Spark to process large-scale market data efficiently.</li>
-                        </ul>
-                        </div>
-                    </div>
-                </div>
+      <section id="skills" class="skills">
+        <h2 class="section-title"><span>02.</span> Skills</h2>
+        <div class="skills-grid">
+          <div class="skill-card">
+            <i data-lucide="brain-circuit" class="card-icon"></i>
+            <h3>AI & Machine Learning</h3>
+            <ul class="expertise-list">
+              <li>Deep Learning (PyTorch, TensorFlow)</li>
+              <li>Natural Language Processing (NLP)</li>
+              <li>Computer Vision (OpenCV)</li>
+              <li>Reinforcement Learning</li>
+              <li>MLOps (MLflow, Kubeflow)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <i data-lucide="trending-up" class="card-icon"></i>
+            <h3>Quantitative Finance & Modeling</h3>
+            <ul class="expertise-list">
+              <li>Derivatives Pricing</li>
+              <li>Risk Management (VaR, CVaR)</li>
+              <li>Portfolio Optimization</li>
+              <li>Time Series Analysis (ARIMA, GARCH)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <i data-lucide="code" class="card-icon"></i>
+            <h3>Programming & Data Science</h3>
+            <ul class="expertise-list">
+              <li>Python (NumPy, Pandas, ML)</li>
+              <li>R (Statistical Modeling)</li>
+              <li>C++ (HPC)</li>
+              <li>SQL (Advanced Querying, ETL)</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <i data-lucide="server" class="card-icon"></i>
+            <h3>Financial Platforms & Tools</h3>
+            <ul class="expertise-list">
+              <li>Bloomberg Terminal</li>
+              <li>Refinitiv Eikon</li>
+              <li>MATLAB</li>
+              <li>Jupyter/RStudio</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <i data-lucide="cloud" class="card-icon"></i>
+            <h3>Cloud & Infrastructure</h3>
+            <ul class="expertise-list">
+              <li>AWS/Azure/GCP (Data Lake/Warehouse)</li>
+              <li>Docker/Kubernetes</li>
+              <li>Apache Airflow</li>
+              <li>Kafka / Stream Processing</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <i data-lucide="zap" class="card-icon"></i>
+            <h3>Algorithmic Trading & DeFi</h3>
+            <ul class="expertise-list">
+              <li>Algorithmic Trading & Systems</li>
+              <li>High-Frequency Trading (HFT)</li>
+              <li>Smart Contract Development (Solidity)</li>
+              <li>Blockchain & Decentralized Finance (DeFi)</li>
+              <li>Low-Latency System Design</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="experience">
+        <h2 class="section-title"><span>03.</span> Work Experience</h2>
+        <div class="experience-container">
+          <div class="experience-item">
+            <div class="company-logo">
+              <img src="assets/icons/ELTE.jpg" alt="Company Logo" />
             </div>
-        </section>
-
-        <section id="education" class="education">
-            <h2 class="section-title"><span>04.</span> Education</h2>
-            <div class="education-container">
-
-                <div class="education-items-wrapper">
-
-               <div class="education-item">
-                    <div class="university-logo">
-                        <img src="assets/icons/WQU.jpg" alt="University Logo">
-                    </div>
-                    <div class="education-content">
-                        <h3>WorldQuant University</h3>
-                        <p class="location">Washington DC, USA</p>
-                        <p class="degree">Master of Science - Financial Engineering</p>
-                        <p class="duration">Jan 2025 - Aug 2026</p>
-                    </div>
-                </div>
-
-                <div class="education-item">
-                    <div class="university-logo">
-                        <img src="assets/icons/ELTE.jpg" alt="University Logo">
-                    </div>
-                    <div class="education-content">
-                        <h3>Eotvos Lorand University</h3>
-                        <p class="location">Budapest, Hungary</p>
-                        <p class="degree">Bachelor of Science - Computer Science</p>
-                        <p class="duration">Sep 2021 - Jan 2025</p>
-                    </div>
-                </div>                
-
+            <div class="experience-content">
+              <h3>Eotvos Lorand University</h3>
+              <p class="location">Budapest, Hungary</p>
+              <h4>Teaching Assistant</h4>
+              <p class="duration">Feb 2025 - May 2025</p>
+              <div class="responsibilities">
+                <h5>Responsibilities:</h5>
+                <ul>
+                  <li>
+                    Supported students in Python, OS, and Algorithms & Data
+                    Structures, aiding with concepts & bugs
+                  </li>
+                  <li>
+                    Conducted tutorials, reviewed assignments, and consistently
+                    aided instructors with delivery
+                  </li>
+                  <li>
+                    Collaborated with faculty to design lab tasks and practice
+                    problems tailored to course goals and needs
+                  </li>
+                  <li>
+                    Provided one-on-one mentorship during office hours to
+                    reinforce outcomes & boost academic success
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+
+          <div class="experience-item">
+            <div class="company-logo">
+              <img src="assets/icons/Ericsson.png" alt="Company Logo" />
             </div>
-        </section>
-
-        <section id="projects" class="projects">
-            <h2 class="section-title"><span>05.</span> Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/Flowlet" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/Flowlet.jpg" alt="Flowlet" class="project-image">
-                        <div class="project-info">
-                            <h3>Flowlet</h3>
-                            <p class="project-description">
-                            Cloud‑agnostic, microservices‑based embedded finance platform offering scalable digital wallets, seamless payment processing, customizable card issuance, end-to-end KYC/AML compliance, robust ledger management, and advanced AI‑powered fraud detection and real-time analytics.                        </p>
-                            <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Flask</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Terraform</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/NexaFi" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/NexaFi.jpg" alt="NexaFi" class="project-image">
-                        <div class="project-info">
-                            <h3>NexaFi</h3>
-                            <p class="project-description">
-                            NexaFi is a revolutionary AI-powered financial operating system for SMBs, unifying accounting, payments, lending, and advisory within a cloud‑native, event‑driven microservices architecture enhanced by advanced ML workflows and distributed ledger integration.
-                            </p>
-                            <div class="project-tech">
-                            <span class="tech-tag">Python (FastAPI)</span>
-                            <span class="tech-tag">Go</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">Kubernetes</span>
-                            <span class="tech-tag">Terraform</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/QuantumAlpha" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/QuantumAlpha.jpg" alt="QuantumAlpha" class="project-image">
-                        <div class="project-info">
-                            <h3>QuantumAlpha</h3>
-                        <p class="project-description">
-                        QuantumAlpha is a next‑gen AI‑driven hedge‑fund platform unifying machine learning, deep learning, and reinforcement learning on multi‑source market data for backtesting, risk management, and real‑time trade execution in a scalable microservices architecture.
-                        </p>
-                        <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">PyTorch</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/Optionix" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/Optionix.jpg" alt="Optionix" class="project-image">
-                        <div class="project-info">
-                            <h3>Optionix</h3>
-                        <p class="project-description">
-                        Comprehensive options trading and analytics platform blending traditional finance and blockchain technology, featuring advanced pricing models, real‑time market data, AI‑powered trading signals, portfolio management, on‑chain smart contracts, and interactive risk visualizations.
-                        </p>
-                        <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">Redis</span>
-                        <span class="tech-tag">RabbitMQ</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">Ethereum</span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/Quantis" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/Quantis.jpg" alt="Quantis" class="project-image">
-                        <div class="project-info">
-                            <h3>Quantis</h3>
-                        <p class="project-description">
-                        Quantis is a comprehensive quantitative trading and investment analytics platform combining advanced statistical models, machine learning algorithms, real‑time and alternative data processing, automated strategy backtesting and execution, risk management, portfolio optimization, and interactive dashboards—delivered via a scalable microservices architecture.
-                        </p>
-                        <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">InfluxDB</span>
-                        <span class="tech-tag">Celery</span>
-                        <span class="tech-tag">Docker</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        <span class="tech-tag">React</span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <div class="project-links">
-                            <a href="#" target="_blank"><i data-lucide="external-link"></i></a>
-                            <a href="https://github.com/abrar2030/RiskOptimizer" target="_blank"><i data-lucide="github"></i></a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <img src="assets/images/RiskOptimizer.jpg" alt="RiskOptimizer" class="project-image">
-                        <div class="project-info">
-                            <h3>RiskOptimizer</h3>
-                        <p class="project-description">
-                        AI‑powered portfolio risk management platform combining advanced risk analysis (VaR, stress testing, volatility forecasting), portfolio optimization, predictive analytics, and blockchain‑backed transparency via smart contracts—delivered through a scalable microservices architecture with real‑time dashboards.
-                        </p>
-                        <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Rust</span>
-                        <span class="tech-tag">FastAPI</span>
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">TypeScript</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                        <span class="tech-tag">TensorFlow</span>
-                        <span class="tech-tag">Kubernetes</span>
-                        </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="experience-content">
+              <h3>Ericsson</h3>
+              <p class="location">Budapest, Hungary</p>
+              <h4>Student Developer</h4>
+              <p class="duration">August 2023 - October 2024</p>
+              <div class="responsibilities">
+                <h5>Responsibilities:</h5>
+                <ul>
+                  <li>
+                    Developed and maintained data-driven applications in Python
+                    and automation workflows.
+                  </li>
+                  <li>
+                    Automated data ingestion and transformation pipelines using
+                    Python, Airflow, and Bash scripting.
+                  </li>
+                  <li>
+                    Applied machine learning models for anomaly detection and
+                    improving financial data quality metrics.
+                  </li>
+                  <li>
+                    Created interactive dashboards and visualizations using
+                    Plotly, Matplotlib, and Seaborn for real-time insights.
+                  </li>
+                  <li>
+                    Worked with Snowflake and PostgreSQL databases to perform
+                    data transformation, integration, and loading operations.
+                  </li>
+                  <li>
+                    Built and optimized SQL and ETL pipelines using PostgreSQL
+                    and Spark to process large-scale market data efficiently.
+                  </li>
+                </ul>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="publications" class="publications">
-            <h2 class="section-title"><span>06.</span> Publications</h2>
-            <div class="publication-list">
-                <div class="publication-item">
-
-                    <div class="publication-content">
-                        <h3 class="publication-title">Quantum-Enhanced Deep Reinforcement Learning for CBDC Liquidity Management</h3>
-	                        <p class="publication-journal"></p>
-                        <p class="publication-authors">Abrar Ahmed</p>
-                        <p class="publication-abstract">A novel QDRL framework to optimize funding strategies under CBDC-induced liquidity stress, outperforming classical DRL models by achieving an 8.1% reduction in liquidity management costs.</p>
-                    </div>
-	                    <a href="https://www.researchgate.net/publication/397415465_Quantum-Enhanced_Deep_Reinforcement_Learning_for_Central_Bank_Digital_Currency_CBDC_Liquidity_Management" class="publication-icon-link" target="_blank" title="View Paper"><i data-lucide="external-link"></i></a>
-                </div>
-                
+      <section id="education" class="education">
+        <h2 class="section-title"><span>04.</span> Education</h2>
+        <div class="education-container">
+          <div class="education-items-wrapper">
+            <div class="education-item">
+              <div class="university-logo">
+                <img src="assets/icons/WQU.jpg" alt="University Logo" />
+              </div>
+              <div class="education-content">
+                <h3>WorldQuant University</h3>
+                <p class="location">Washington DC, USA</p>
+                <p class="degree">Master of Science - Financial Engineering</p>
+                <p class="duration">Jan 2025 - Aug 2026</p>
+              </div>
             </div>
-        </section>       <section id="testimonials" class="testimonials">
-            <h2 class="section-title"><span>07.</span> Testimonials</h2>
-            <div class="testimonials-container">
-                <div class="testimonials-slider">
-                    <div class="testimonials-track">
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">I had the pleasure of teaching Abrar Ahmed in "Computers in Practice" and "Computer Systems" courses at ELTE, where he consistently impressed me with his curiosity, analytical thinking, and strong grasp of core technical concepts. Abrar demonstrated excellent proficiency in Linux and showed a proactive approach to problem-solving. What truly set him apart was his performance as a Lab Demonstrator. Abrar not only supported his peers with clarity and patience but also contributed significantly to the improvement of lab activities through his innovative suggestions and hands-on expertise.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Chaman.jpeg" alt="Chaman Verma">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Chaman Verma, Ph.D., Post. Doc.</h4>
-                                        <p class="author-position">Assistant Professor, Faculty of Informatics ELTE IK, Eötvös Loránd University</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">I had the pleasure of working and mentoring Abrar during his Student Developer internship at Ericsson Hungary. His dedication, curiosity, and work ethic were truly impressive. Abrar consistently paid attention to deadlines, asked insightful questions about technology and process, and balanced his internship with university coursework exceptionally well. His attention to detail and willingness to tackle challenges stood out. I believe Abrar has the potential to excel in both software development and management roles and I highly recommend him.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Arbab.jpeg" alt="Arbab Ali">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Arbab Ali</h4>
-                                        <p class="author-position">Microservices Developer | Java Spring Boot Developer | 5G Intelligent Automation Platform</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">I had the opportunity to work with Abrar at Ericsson and I highly recommend him as a colleague. He consistently demonstrated a remarkable ability to quickly grasp new concepts, coupled with a strong motivation and diligent work ethic. With his dedication and enthusiasm he contributed to the team's daily tasks. It is a pleasure working alongside him.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Zoltan.jpeg" alt="Zoltán Szabó">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Zoltán Szabó</h4>
-                                        <p class="author-position">DevOps | Microservices Developer | Java Spring Boot Developer</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">I had the pleasure of working closely with Abrar Ahmed during his time at Ericsson as a Student Software Developer. Abrar showed great initiative in tackling complex problems and consistently delivered high-quality solutions within tight deadlines. His positive attitude and willingness to take on new challenges made him a valuable member of our team. His professionalism, teamwork, and communication skills were exemplary. I highly recommend Abrar to any organization seeking a talented and motivated software developer.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Begum.jpeg" alt="Begüm Özyılmaz Korkmaz">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Begüm Özyılmaz Korkmaz</h4>
-                                        <p class="author-position">Product Owner at Telefonica Germany</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">Abrar is a student developer on my team. Despite being a junior member, his proactive engagement, eagerness to learn, and commitment to delivering quality work have made a valuable impact on our team, reflecting his promising potential in the agile development environment. He has the potential to be a valuable member of any agile team.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Danish.jpeg" alt="Danish Adeel">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Danish Adeel</h4>
-                                        <p class="author-position">Technologist | Agile Project Manager | Certified Scrum Master</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="testimonial-item">
-                            <div class="testimonial-content">
-                                <div class="testimonial-quote">
-                                    <i data-lucide="quote"></i>
-                                </div>
-                                <p class="testimonial-text">I had the opportunity to work together with Abrar at Ericsson, and I'm pleased to recommend him. Abrar completed the onboarding process quickly and he started taking on challenging tasks very early on. I'm also glad to say that everyone could rely on him as a teammate, he is always available for technical discussions and is up to date on the latest features the team is working on. He'd make an excellent addition to any team.</p>
-                                <div class="testimonial-author">
-                                    <div class="author-image">
-                                        <img src="assets/images/Tamas.jpeg" alt="Tamás Márk Simon">
-                                    </div>
-                                    <div class="author-info">
-                                        <h4 class="author-name">Tamás Márk Simon</h4>
-                                        <p class="author-position">Senior Developer & Software Architect at Ericsson</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="testimonials-controls">
-                        <button class="testimonial-arrow prev" aria-label="Previous testimonial">
-                            <i data-lucide="chevron-left"></i>
-                        </button>
-                        <div class="testimonials-dots">
-                            <button class="testimonial-dot active" data-index="0" aria-label="Testimonial 1"></button>
-                            <button class="testimonial-dot" data-index="1" aria-label="Testimonial 2"></button>
-                            <button class="testimonial-dot" data-index="2" aria-label="Testimonial 3"></button>
-                            <button class="testimonial-dot" data-index="3" aria-label="Testimonial 4"></button>
-                            <button class="testimonial-dot" data-index="4" aria-label="Testimonial 5"></button>
-                            <button class="testimonial-dot" data-index="5" aria-label="Testimonial 6"></button>
-                        </div>
-                        <button class="testimonial-arrow next" aria-label="Next testimonial">
-                            <i data-lucide="chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
+            <div class="education-item">
+              <div class="university-logo">
+                <img src="assets/icons/ELTE.jpg" alt="University Logo" />
+              </div>
+              <div class="education-content">
+                <h3>Eotvos Lorand University</h3>
+                <p class="location">Budapest, Hungary</p>
+                <p class="degree">Bachelor of Science - Computer Science</p>
+                <p class="duration">Sep 2021 - Jan 2025</p>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="contact" class="contact">
-            <h2 class="section-title"><span>08.</span> Contact</h2>
-            <div class="contact-container">
-                <div class="contact-methods">
-                    <h3>Connect With Me</h3>
-                    <div class="contact-cards">
-                        <div class="contact-card">
-                            <i data-lucide="instagram"></i>
-                            <h4>Instagram</h4>
-                            <p>@abrar2o3o</p>
-                            <a href="https://www.instagram.com/abrar2o3o/" target="_blank" class="contact-link">
-                                Send Message <i data-lucide="arrow-right"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <i data-lucide="linkedin"></i>
-                            <h4>LinkedIn</h4>
-                            <p>@abrar2030</p>
-                            <a href="https://www.linkedin.com/in/abrar2030/" target="_blank" class="contact-link">
-                                Send Message <i data-lucide="arrow-right"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <i data-lucide="facebook"></i>
-                            <h4>Facebook</h4>
-                            <p>@abrar2O3O</p>
-                            <a href="https://www.facebook.com/abrar2O3O" target="_blank" class="contact-link">
-                                Send Message <i data-lucide="arrow-right"></i>
-                            </a>
-                        </div>
-                        
-                        <div class="contact-card">
-                            <i data-lucide="github"></i>
-                            <h4>GitHub</h4>
-                            <p>@abrar2030</p>
-                            <a href="https://github.com/abrar2030" target="_blank" class="contact-link">
-                                Send Message <i data-lucide="arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <h3>Send me an email</h3>
-                    <form id="contact-form">
-                        <div class="form-group">
-                            <input type="text" placeholder="Enter your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Enter your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Enter your message" required></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Email</button>
-                    </form>
-                </div>
+      <section id="projects" class="projects">
+        <h2 class="section-title"><span>05.</span> Projects</h2>
+        <div class="projects-grid">
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a href="https://github.com/abrar2030/Flowlet" target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
             </div>
-        </section>
+            <div class="project-content">
+              <img
+                src="assets/images/Flowlet.jpg"
+                alt="Flowlet"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>Flowlet</h3>
+                <p class="project-description">
+                  Cloud‑agnostic, microservices‑based embedded finance platform
+                  offering scalable digital wallets, seamless payment
+                  processing, customizable card issuance, end-to-end KYC/AML
+                  compliance, robust ledger management, and advanced AI‑powered
+                  fraud detection and real-time analytics.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Flask</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">Terraform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a href="https://github.com/abrar2030/NexaFi" target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <img
+                src="assets/images/NexaFi.jpg"
+                alt="NexaFi"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>NexaFi</h3>
+                <p class="project-description">
+                  NexaFi is a revolutionary AI-powered financial operating
+                  system for SMBs, unifying accounting, payments, lending, and
+                  advisory within a cloud‑native, event‑driven microservices
+                  architecture enhanced by advanced ML workflows and distributed
+                  ledger integration.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python (FastAPI)</span>
+                  <span class="tech-tag">Go</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Kafka</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">Terraform</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a
+                  href="https://github.com/abrar2030/QuantumAlpha"
+                  target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <img
+                src="assets/images/QuantumAlpha.jpg"
+                alt="QuantumAlpha"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>QuantumAlpha</h3>
+                <p class="project-description">
+                  QuantumAlpha is a next‑gen AI‑driven hedge‑fund platform
+                  unifying machine learning, deep learning, and reinforcement
+                  learning on multi‑source market data for backtesting, risk
+                  management, and real‑time trade execution in a scalable
+                  microservices architecture.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">PyTorch</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a href="https://github.com/abrar2030/Optionix" target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <img
+                src="assets/images/Optionix.jpg"
+                alt="Optionix"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>Optionix</h3>
+                <p class="project-description">
+                  Comprehensive options trading and analytics platform blending
+                  traditional finance and blockchain technology, featuring
+                  advanced pricing models, real‑time market data, AI‑powered
+                  trading signals, portfolio management, on‑chain smart
+                  contracts, and interactive risk visualizations.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Rust</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">Redis</span>
+                  <span class="tech-tag">RabbitMQ</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">Ethereum</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a href="https://github.com/abrar2030/Quantis" target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <img
+                src="assets/images/Quantis.jpg"
+                alt="Quantis"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>Quantis</h3>
+                <p class="project-description">
+                  Quantis is a comprehensive quantitative trading and investment
+                  analytics platform combining advanced statistical models,
+                  machine learning algorithms, real‑time and alternative data
+                  processing, automated strategy backtesting and execution, risk
+                  management, portfolio optimization, and interactive
+                  dashboards—delivered via a scalable microservices
+                  architecture.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Rust</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">InfluxDB</span>
+                  <span class="tech-tag">Celery</span>
+                  <span class="tech-tag">Docker</span>
+                  <span class="tech-tag">Kubernetes</span>
+                  <span class="tech-tag">React</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <div class="project-links">
+                <a href="#" target="_blank"
+                  ><i data-lucide="external-link"></i
+                ></a>
+                <a
+                  href="https://github.com/abrar2030/RiskOptimizer"
+                  target="_blank"
+                  ><i data-lucide="github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="project-content">
+              <img
+                src="assets/images/RiskOptimizer.jpg"
+                alt="RiskOptimizer"
+                class="project-image"
+              />
+              <div class="project-info">
+                <h3>RiskOptimizer</h3>
+                <p class="project-description">
+                  AI‑powered portfolio risk management platform combining
+                  advanced risk analysis (VaR, stress testing, volatility
+                  forecasting), portfolio optimization, predictive analytics,
+                  and blockchain‑backed transparency via smart
+                  contracts—delivered through a scalable microservices
+                  architecture with real‑time dashboards.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Rust</span>
+                  <span class="tech-tag">FastAPI</span>
+                  <span class="tech-tag">React</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">PostgreSQL</span>
+                  <span class="tech-tag">TensorFlow</span>
+                  <span class="tech-tag">Kubernetes</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="publications" class="publications">
+        <h2 class="section-title"><span>06.</span> Publications</h2>
+        <div class="publication-list">
+          <div class="publication-item">
+            <div class="publication-content">
+              <h3 class="publication-title">
+                Quantum-Enhanced Deep Reinforcement Learning for CBDC Liquidity
+                Management
+              </h3>
+              <p class="publication-journal"></p>
+              <p class="publication-authors">Abrar Ahmed</p>
+              <p class="publication-abstract">
+                A novel QDRL framework to optimize funding strategies under
+                CBDC-induced liquidity stress, outperforming classical DRL
+                models by achieving an 8.1% reduction in liquidity management
+                costs.
+              </p>
+            </div>
+            <a
+              href="https://www.researchgate.net/publication/397415465_Quantum-Enhanced_Deep_Reinforcement_Learning_for_Central_Bank_Digital_Currency_CBDC_Liquidity_Management"
+              class="publication-icon-link"
+              target="_blank"
+              title="View Paper"
+              ><i data-lucide="external-link"></i
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section id="testimonials" class="testimonials">
+        <h2 class="section-title"><span>07.</span> Testimonials</h2>
+        <div class="testimonials-container">
+          <div class="testimonials-slider">
+            <div class="testimonials-track">
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    I had the pleasure of teaching Abrar Ahmed in "Computers in
+                    Practice" and "Computer Systems" courses at ELTE, where he
+                    consistently impressed me with his curiosity, analytical
+                    thinking, and strong grasp of core technical concepts. Abrar
+                    demonstrated excellent proficiency in Linux and showed a
+                    proactive approach to problem-solving. What truly set him
+                    apart was his performance as a Lab Demonstrator. Abrar not
+                    only supported his peers with clarity and patience but also
+                    contributed significantly to the improvement of lab
+                    activities through his innovative suggestions and hands-on
+                    expertise.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img src="assets/images/Chaman.jpeg" alt="Chaman Verma" />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">
+                        Chaman Verma, Ph.D., Post. Doc.
+                      </h4>
+                      <p class="author-position">
+                        Assistant Professor, Faculty of Informatics ELTE IK,
+                        Eötvös Loránd University
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    I had the pleasure of working and mentoring Abrar during his
+                    Student Developer internship at Ericsson Hungary. His
+                    dedication, curiosity, and work ethic were truly impressive.
+                    Abrar consistently paid attention to deadlines, asked
+                    insightful questions about technology and process, and
+                    balanced his internship with university coursework
+                    exceptionally well. His attention to detail and willingness
+                    to tackle challenges stood out. I believe Abrar has the
+                    potential to excel in both software development and
+                    management roles and I highly recommend him.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img src="assets/images/Arbab.jpeg" alt="Arbab Ali" />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">Arbab Ali</h4>
+                      <p class="author-position">
+                        Microservices Developer | Java Spring Boot Developer |
+                        5G Intelligent Automation Platform
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    I had the opportunity to work with Abrar at Ericsson and I
+                    highly recommend him as a colleague. He consistently
+                    demonstrated a remarkable ability to quickly grasp new
+                    concepts, coupled with a strong motivation and diligent work
+                    ethic. With his dedication and enthusiasm he contributed to
+                    the team's daily tasks. It is a pleasure working alongside
+                    him.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img src="assets/images/Zoltan.jpeg" alt="Zoltán Szabó" />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">Zoltán Szabó</h4>
+                      <p class="author-position">
+                        DevOps | Microservices Developer | Java Spring Boot
+                        Developer
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    I had the pleasure of working closely with Abrar Ahmed
+                    during his time at Ericsson as a Student Software Developer.
+                    Abrar showed great initiative in tackling complex problems
+                    and consistently delivered high-quality solutions within
+                    tight deadlines. His positive attitude and willingness to
+                    take on new challenges made him a valuable member of our
+                    team. His professionalism, teamwork, and communication
+                    skills were exemplary. I highly recommend Abrar to any
+                    organization seeking a talented and motivated software
+                    developer.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img
+                        src="assets/images/Begum.jpeg"
+                        alt="Begüm Özyılmaz Korkmaz"
+                      />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">Begüm Özyılmaz Korkmaz</h4>
+                      <p class="author-position">
+                        Product Owner at Telefonica Germany
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    Abrar is a student developer on my team. Despite being a
+                    junior member, his proactive engagement, eagerness to learn,
+                    and commitment to delivering quality work have made a
+                    valuable impact on our team, reflecting his promising
+                    potential in the agile development environment. He has the
+                    potential to be a valuable member of any agile team.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img src="assets/images/Danish.jpeg" alt="Danish Adeel" />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">Danish Adeel</h4>
+                      <p class="author-position">
+                        Technologist | Agile Project Manager | Certified Scrum
+                        Master
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-item">
+                <div class="testimonial-content">
+                  <div class="testimonial-quote">
+                    <i data-lucide="quote"></i>
+                  </div>
+                  <p class="testimonial-text">
+                    I had the opportunity to work together with Abrar at
+                    Ericsson, and I'm pleased to recommend him. Abrar completed
+                    the onboarding process quickly and he started taking on
+                    challenging tasks very early on. I'm also glad to say that
+                    everyone could rely on him as a teammate, he is always
+                    available for technical discussions and is up to date on the
+                    latest features the team is working on. He'd make an
+                    excellent addition to any team.
+                  </p>
+                  <div class="testimonial-author">
+                    <div class="author-image">
+                      <img
+                        src="assets/images/Tamas.jpeg"
+                        alt="Tamás Márk Simon"
+                      />
+                    </div>
+                    <div class="author-info">
+                      <h4 class="author-name">Tamás Márk Simon</h4>
+                      <p class="author-position">
+                        Senior Developer & Software Architect at Ericsson
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="testimonials-controls">
+              <button
+                class="testimonial-arrow prev"
+                aria-label="Previous testimonial"
+              >
+                <i data-lucide="chevron-left"></i>
+              </button>
+              <div class="testimonials-dots">
+                <button
+                  class="testimonial-dot active"
+                  data-index="0"
+                  aria-label="Testimonial 1"
+                ></button>
+                <button
+                  class="testimonial-dot"
+                  data-index="1"
+                  aria-label="Testimonial 2"
+                ></button>
+                <button
+                  class="testimonial-dot"
+                  data-index="2"
+                  aria-label="Testimonial 3"
+                ></button>
+                <button
+                  class="testimonial-dot"
+                  data-index="3"
+                  aria-label="Testimonial 4"
+                ></button>
+                <button
+                  class="testimonial-dot"
+                  data-index="4"
+                  aria-label="Testimonial 5"
+                ></button>
+                <button
+                  class="testimonial-dot"
+                  data-index="5"
+                  aria-label="Testimonial 6"
+                ></button>
+              </div>
+              <button
+                class="testimonial-arrow next"
+                aria-label="Next testimonial"
+              >
+                <i data-lucide="chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact">
+        <h2 class="section-title"><span>08.</span> Contact</h2>
+        <div class="contact-container">
+          <div class="contact-methods">
+            <h3>Connect With Me</h3>
+            <div class="contact-cards">
+              <div class="contact-card">
+                <i data-lucide="instagram"></i>
+                <h4>Instagram</h4>
+                <p>@abrar2o3o</p>
+                <a
+                  href="https://www.instagram.com/abrar2o3o/"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  Send Message <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="contact-card">
+                <i data-lucide="linkedin"></i>
+                <h4>LinkedIn</h4>
+                <p>@abrar2030</p>
+                <a
+                  href="https://www.linkedin.com/in/abrar2030/"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  Send Message <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="contact-card">
+                <i data-lucide="facebook"></i>
+                <h4>Facebook</h4>
+                <p>@abrar2O3O</p>
+                <a
+                  href="https://www.facebook.com/abrar2O3O"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  Send Message <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+
+              <div class="contact-card">
+                <i data-lucide="github"></i>
+                <h4>GitHub</h4>
+                <p>@abrar2030</p>
+                <a
+                  href="https://github.com/abrar2030"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  Send Message <i data-lucide="arrow-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form">
+            <h3>Send me an email</h3>
+            <form id="contact-form">
+              <div class="form-group">
+                <input type="text" placeholder="Enter your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Enter your Email" required />
+              </div>
+              <div class="form-group">
+                <textarea placeholder="Enter your message" required></textarea>
+              </div>
+              <button type="submit" class="submit-btn">Send Email</button>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <div class="footer-content">
-            <p>Designed & Built by Abrar Ahmed</p>
-            <p>© 2025 All Rights Reserved</p>
-        </div>
+      <div class="footer-content">
+        <p>Designed & Built by Abrar Ahmed</p>
+        <p>© 2025 All Rights Reserved</p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
     <script src="cursor-enhancement.js"></script>
-</body>
+  </body>
 </html>
